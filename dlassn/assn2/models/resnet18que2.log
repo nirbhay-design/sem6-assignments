@@ -1,0 +1,167 @@
+cuda:0
+1563
+313
+11307840
+8525056
+epoch:[1/50], TrainLoss:0.565
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[2/50], TrainLoss:0.442
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[3/50], TrainLoss:0.409
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[4/50], TrainLoss:0.385
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[5/50], TrainLoss:0.371
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[6/50], TrainLoss:0.360
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[7/50], TrainLoss:0.348
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[8/50], TrainLoss:0.341
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[9/50], TrainLoss:0.328
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[10/50], TrainLoss:0.317
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[11/50], TrainLoss:0.311
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[12/50], TrainLoss:0.300
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[13/50], TrainLoss:0.296
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[14/50], TrainLoss:0.285
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[15/50], TrainLoss:0.278
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[16/50], TrainLoss:0.276
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[17/50], TrainLoss:0.270
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[18/50], TrainLoss:0.266
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[19/50], TrainLoss:0.256
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[20/50], TrainLoss:0.253
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[21/50], TrainLoss:0.248
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[22/50], TrainLoss:0.238
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[23/50], TrainLoss:0.223
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[24/50], TrainLoss:0.216
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[25/50], TrainLoss:0.207
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[26/50], TrainLoss:0.193
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[27/50], TrainLoss:0.192
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[28/50], TrainLoss:0.185
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[29/50], TrainLoss:0.184
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[30/50], TrainLoss:0.176
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[31/50], TrainLoss:0.171
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[32/50], TrainLoss:0.173
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[33/50], TrainLoss:0.180
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[34/50], TrainLoss:0.167
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[35/50], TrainLoss:0.166
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[36/50], TrainLoss:0.155
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[37/50], TrainLoss:0.157
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[38/50], TrainLoss:0.155
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[39/50], TrainLoss:0.158
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[40/50], TrainLoss:0.145
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[41/50], TrainLoss:0.152
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[42/50], TrainLoss:0.135
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[43/50], TrainLoss:0.141
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[44/50], TrainLoss:0.142
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[45/50], TrainLoss:0.133
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[46/50], TrainLoss:0.136
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[47/50], TrainLoss:0.140
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[48/50], TrainLoss:0.131
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[49/50], TrainLoss:0.131
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+epoch:[50/50], TrainLoss:0.125
+done time 55.777 Mins
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+(50000, 256)
+(50000,)
+SVC(C=3, probability=True)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+train_batch_done: 0train_batch_done: 1train_batch_done: 2train_batch_done: 3train_batch_done: 4train_batch_done: 5train_batch_done: 6train_batch_done: 7train_batch_done: 8train_batch_done: 9train_batch_done: 10train_batch_done: 11train_batch_done: 12train_batch_done: 13train_batch_done: 14train_batch_done: 15train_batch_done: 16train_batch_done: 17train_batch_done: 18train_batch_done: 19train_batch_done: 20train_batch_done: 21train_batch_done: 22train_batch_done: 23train_batch_done: 24train_batch_done: 25train_batch_done: 26train_batch_done: 27train_batch_done: 28train_batch_done: 29train_batch_done: 30train_batch_done: 31train_batch_done: 32train_batch_done: 33train_batch_done: 34train_batch_done: 35train_batch_done: 36train_batch_done: 37train_batch_done: 38train_batch_done: 39train_batch_done: 40train_batch_done: 41train_batch_done: 42train_batch_done: 43train_batch_done: 44train_batch_done: 45train_batch_done: 46train_batch_done: 47train_batch_done: 48train_batch_done: 49train_batch_done: 50train_batch_done: 51train_batch_done: 52train_batch_done: 53train_batch_done: 54train_batch_done: 55train_batch_done: 56train_batch_done: 57train_batch_done: 58train_batch_done: 59train_batch_done: 60train_batch_done: 61train_batch_done: 62train_batch_done: 63train_batch_done: 64train_batch_done: 65train_batch_done: 66train_batch_done: 67train_batch_done: 68train_batch_done: 69train_batch_done: 70train_batch_done: 71train_batch_done: 72train_batch_done: 73train_batch_done: 74train_batch_done: 75train_batch_done: 76train_batch_done: 77train_batch_done: 78train_batch_done: 79train_batch_done: 80train_batch_done: 81train_batch_done: 82train_batch_done: 83train_batch_done: 84train_batch_done: 85train_batch_done: 86train_batch_done: 87train_batch_done: 88train_batch_done: 89train_batch_done: 90train_batch_done: 91train_batch_done: 92train_batch_done: 93train_batch_done: 94train_batch_done: 95train_batch_done: 96train_batch_done: 97train_batch_done: 98train_batch_done: 99train_batch_done: 100train_batch_done: 101train_batch_done: 102train_batch_done: 103train_batch_done: 104train_batch_done: 105train_batch_done: 106train_batch_done: 107train_batch_done: 108train_batch_done: 109train_batch_done: 110train_batch_done: 111train_batch_done: 112train_batch_done: 113train_batch_done: 114train_batch_done: 115train_batch_done: 116train_batch_done: 117train_batch_done: 118train_batch_done: 119train_batch_done: 120train_batch_done: 121train_batch_done: 122train_batch_done: 123train_batch_done: 124train_batch_done: 125train_batch_done: 126train_batch_done: 127train_batch_done: 128train_batch_done: 129train_batch_done: 130train_batch_done: 131train_batch_done: 132train_batch_done: 133train_batch_done: 134train_batch_done: 135train_batch_done: 136train_batch_done: 137train_batch_done: 138train_batch_done: 139train_batch_done: 140train_batch_done: 141train_batch_done: 142train_batch_done: 143train_batch_done: 144train_batch_done: 145train_batch_done: 146train_batch_done: 147train_batch_done: 148train_batch_done: 149train_batch_done: 150train_batch_done: 151train_batch_done: 152train_batch_done: 153train_batch_done: 154train_batch_done: 155train_batch_done: 156train_batch_done: 157train_batch_done: 158train_batch_done: 159train_batch_done: 160train_batch_done: 161train_batch_done: 162train_batch_done: 163train_batch_done: 164train_batch_done: 165train_batch_done: 166train_batch_done: 167train_batch_done: 168train_batch_done: 169train_batch_done: 170train_batch_done: 171train_batch_done: 172train_batch_done: 173train_batch_done: 174train_batch_done: 175train_batch_done: 176train_batch_done: 177train_batch_done: 178train_batch_done: 179train_batch_done: 180train_batch_done: 181train_batch_done: 182train_batch_done: 183train_batch_done: 184train_batch_done: 185train_batch_done: 186train_batch_done: 187train_batch_done: 188train_batch_done: 189train_batch_done: 190train_batch_done: 191train_batch_done: 192train_batch_done: 193train_batch_done: 194train_batch_done: 195train_batch_done: 196train_batch_done: 197train_batch_done: 198train_batch_done: 199train_batch_done: 200train_batch_done: 201train_batch_done: 202train_batch_done: 203train_batch_done: 204train_batch_done: 205train_batch_done: 206train_batch_done: 207train_batch_done: 208train_batch_done: 209train_batch_done: 210train_batch_done: 211train_batch_done: 212train_batch_done: 213train_batch_done: 214train_batch_done: 215train_batch_done: 216train_batch_done: 217train_batch_done: 218train_batch_done: 219train_batch_done: 220train_batch_done: 221train_batch_done: 222train_batch_done: 223train_batch_done: 224train_batch_done: 225train_batch_done: 226train_batch_done: 227train_batch_done: 228train_batch_done: 229train_batch_done: 230train_batch_done: 231train_batch_done: 232train_batch_done: 233train_batch_done: 234train_batch_done: 235train_batch_done: 236train_batch_done: 237train_batch_done: 238train_batch_done: 239train_batch_done: 240train_batch_done: 241train_batch_done: 242train_batch_done: 243train_batch_done: 244train_batch_done: 245train_batch_done: 246train_batch_done: 247train_batch_done: 248train_batch_done: 249train_batch_done: 250train_batch_done: 251train_batch_done: 252train_batch_done: 253train_batch_done: 254train_batch_done: 255train_batch_done: 256train_batch_done: 257train_batch_done: 258train_batch_done: 259train_batch_done: 260train_batch_done: 261train_batch_done: 262train_batch_done: 263train_batch_done: 264train_batch_done: 265train_batch_done: 266train_batch_done: 267train_batch_done: 268train_batch_done: 269train_batch_done: 270train_batch_done: 271train_batch_done: 272train_batch_done: 273train_batch_done: 274train_batch_done: 275train_batch_done: 276train_batch_done: 277train_batch_done: 278train_batch_done: 279train_batch_done: 280train_batch_done: 281train_batch_done: 282train_batch_done: 283train_batch_done: 284train_batch_done: 285train_batch_done: 286train_batch_done: 287train_batch_done: 288train_batch_done: 289train_batch_done: 290train_batch_done: 291train_batch_done: 292train_batch_done: 293train_batch_done: 294train_batch_done: 295train_batch_done: 296train_batch_done: 297train_batch_done: 298train_batch_done: 299train_batch_done: 300train_batch_done: 301train_batch_done: 302train_batch_done: 303train_batch_done: 304train_batch_done: 305train_batch_done: 306train_batch_done: 307train_batch_done: 308train_batch_done: 309train_batch_done: 310train_batch_done: 311train_batch_done: 312(10000, 256)
+(10000,)
+accuracy:  0.3264
+precision:  0.3185882644403369
+recall:  0.3264
+f_score:  0.3186516247698379

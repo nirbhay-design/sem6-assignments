@@ -1,0 +1,3 @@
+ls
+hi my name is nirbhay sharma
+hi I am taking a course on deep learning code is csl4020

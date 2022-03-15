@@ -1,0 +1,72 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             SUMOFN, CODE, READONLY
+    2 00000000                 EXPORT           __main
+    3 00000000                 ENTRY
+    4 00000000         
+    5 00000000         __main  PROC
+    6 00000000 F04F 0001       MOV              r0, #1
+    7 00000004 F04F 0104       MOV              r1, #4
+    8 00000008 F04F 0200       MOV              r2, #0
+    9 0000000C         
+   10 0000000C 4288    Loop    CMP              r0, r1
+   11 0000000E DC03            BGT              stop
+   12 00000010 4402            ADD              r2,r0
+   13 00000012 F100 0001       ADD              r0,r0,#1
+   14 00000016 E7F9            B                Loop
+   15 00000018         
+   16 00000018 E7FE    stop    B                stop
+   17 0000001A                 ENDP
+   18 0000001A                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
+erwork --depend=.\objects\part2.d -o.\objects\part2.o -I.\RTE\_Target_1 -I"C:\U
+sers\Nirbhay sharma\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include"
+ -I"C:\Users\Nirbhay sharma\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\D
+rivers\CMSIS\Device\ST\STM32F4xx\Include" --predefine="__EVAL SETA 1" --predefi
+ne="__UVISION_VERSION SETA 528" --predefine="_RTE_ SETA 1" --predefine="STM32F4
+07xx SETA 1" --list=.\listings\part2.lst part2.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Loop 0000000C
+
+Symbol: Loop
+   Definitions
+      At line 10 in file part2.s
+   Uses
+      At line 14 in file part2.s
+Comment: Loop used once
+SUMOFN 00000000
+
+Symbol: SUMOFN
+   Definitions
+      At line 1 in file part2.s
+   Uses
+      None
+Comment: SUMOFN unused
+__main 00000000
+
+Symbol: __main
+   Definitions
+      At line 5 in file part2.s
+   Uses
+      At line 2 in file part2.s
+Comment: __main used once
+stop 00000018
+
+Symbol: stop
+   Definitions
+      At line 16 in file part2.s
+   Uses
+      At line 11 in file part2.s
+      At line 16 in file part2.s
+
+4 symbols
+339 symbols in table

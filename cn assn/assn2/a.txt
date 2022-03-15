@@ -1,0 +1,36 @@
+Active Internet connections (servers and established)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 localhost:33699         0.0.0.0:*               LISTEN     
+tcp        0      0 localhost:50710         localhost:33699         ESTABLISHED
+tcp        0      0 localhost:50712         localhost:33699         ESTABLISHED
+tcp        0      0 localhost:33699         localhost:50710         ESTABLISHED
+tcp        0      0 localhost:33699         localhost:50712         ESTABLISHED
+Active UNIX domain sockets (servers and established)
+Proto RefCnt Flags       Type       State         I-Node   Path
+unix  2      [ ACC ]     STREAM     LISTENING     17238    /tmp/vscode-git-c148ffc5aa.sock
+unix  2      [ ACC ]     SEQPACKET  LISTENING     20487    /run/WSL/90_interop
+unix  2      [ ACC ]     SEQPACKET  LISTENING     1066     /run/WSL/136_interop
+unix  2      [ ACC ]     STREAM     LISTENING     38       /tmp/CoreFxPipe_vscode.b6961b8ae019c1e08ce2621753d68b18
+unix  2      [ ACC ]     SEQPACKET  LISTENING     1077     /run/WSL/151_interop
+unix  2      [ ACC ]     STREAM     LISTENING     25618    /tmp/vscode-ipc-94b4477d-0c70-4fe7-a464-61bab8bb610e.sock
+unix  2      [ ACC ]     STREAM     LISTENING     25624    /tmp/CoreFxPipe_c555eaee88664d89906f6eb03d2305b2
+unix  2      [ ACC ]     STREAM     LISTENING     1098     /tmp/dotnet-diagnostic-193-3044-socket
+unix  2      [ ACC ]     STREAM     LISTENING     24624    /tmp/vscode-ipc-115ddd00-b247-4109-aa8f-92fa4532ef34.sock
+unix  3      [ ]         STREAM     CONNECTED     25630    
+unix  3      [ ]         STREAM     CONNECTED     25631    
+unix  3      [ ]         STREAM     CONNECTED     25628    
+unix  3      [ ]         STREAM     CONNECTED     25629    
+unix  3      [ ]         STREAM     CONNECTED     23557    
+unix  3      [ ]         STREAM     CONNECTED     23558    
+unix  3      [ ]         STREAM     CONNECTED     17520    
+unix  3      [ ]         STREAM     CONNECTED     20608    /tmp/CoreFxPipe_vscode.b6961b8ae019c1e08ce2621753d68b18
+unix  3      [ ]         STREAM     CONNECTED     17499    
+unix  3      [ ]         STREAM     CONNECTED     17500    
+unix  3      [ ]         STREAM     CONNECTED     17501    
+unix  3      [ ]         STREAM     CONNECTED     17502    
+unix  3      [ ]         STREAM     CONNECTED     17495    
+unix  3      [ ]         STREAM     CONNECTED     17496    
+unix  3      [ ]         STREAM     CONNECTED     17497    
+unix  3      [ ]         STREAM     CONNECTED     17498    
+unix  3      [ ]         STREAM     CONNECTED     27       
+unix  3      [ ]         STREAM     CONNECTED     28       

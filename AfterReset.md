@@ -1,0 +1,25 @@
+- vscode
+    - live share
+    - Google plex
+    - Es7
+    - ejs snippets
+    - Remote - wsl
+    - c/c++ compiler
+    - tabnine
+- zoom
+- mingw
+- sublime text
+- git
+- java
+- c/c++
+- python (3.8)
+    - numpy
+    - matplotlib
+    - pil
+- foxit reader
+- ubuntu wsl (zsh)
+- font
+    - Ubuntu
+    - Hack
+- nodejs
+- heroku

@@ -1,0 +1,101 @@
+%%% Key exchange protocol (with 3 bugs in the spec (see below))
+%%% 1. A -> T: {Kab}_Kat
+%%% 2. T -> B: {Kab}_Kbt
+
+role role_A(A:agent,B:agent,T:agent,Kat:symmetric_key,SND,RCV:channel(dy))
+played_by A
+def=
+	local
+		State:nat,
+                Kab:symmetric_key
+	init
+		State := 0
+	transition
+		1. State=0 /\ RCV(start) =|> State':=1 
+		/\ Kab':=new() /\ SND({Kab'}_Kat) 
+		/\ secret(Kab',sec_1,{A,B,T})
+		%/\ SND(Kab')   %% Unsafe protocol but claimed SAFE!,
+                               %% Because of the bugs in the spec.
+end role
+
+role role_T(T:agent,A:agent,B:agent,Kat,Kbt:symmetric_key,SND,RCV:channel(dy))
+played_by T
+def=
+	local
+		State:nat,
+                Kab:symmetric_key
+	init
+		State := 0
+	transition
+		1. State=0 /\ RCV({Kab'}_Kat) =|> State':=1 /\ SND({Kab'}_Kbt) 
+
+end role
+
+
+role role_B(B:agent,A:agent,T:agent,Kbt:symmetric_key,SND,RCV:channel(dy))
+played_by B
+def=
+	local
+		State:nat,
+                Kab:symmetric_key
+	init
+		State := 0
+	transition
+		1. State=0 /\ RCV({Kab'}_Kbt) =|> State':=1 
+end role
+
+
+role session(A:agent,B:agent,T:agent,Kat,Kbt:symmetric_key)
+def=
+	local
+		SND3,RCV3,SND2,RCV2,SND1,RCV1:channel(dy)
+	composition
+                role_A(A,B,T,Kat,SND1,RCV1) /\
+		role_B(B,A,T,Kbt,SND2,RCV2) /\ 
+                role_T(T,A,B,Kat,Kbt,SND3,RCV3) 
+end role
+
+role environment()
+def=
+	const
+		kat,kbt,kit:symmetric_key,
+                alice,bob,trusted:agent,        
+                sec_1,auth_1:protocol_id
+	intruder_knowledge = {alice,bob,kit}
+	composition
+		session(alice,bob,trusted,kat,kbt) /\
+		session(alice,i,trusted,kat,kit)
+
+end role
+
+goal
+        secrecy_of sec_1
+end goal
+
+environment()
+
+
+%%% Bugs can be found using span
+%%% 
+%%% 1) No transition can be triggered (even in intruder simulation)
+%%%    This means that the first transition of the protocol cannot occur.
+%%%    Thus, the problem is located in the role A.
+%%%    This is due to the State=1 check of role A, which is impossible to satisfy. Correct by 
+%%%    State=0.
+%%%
+%%% 2) After correcting the first bug. Try again to start a protocol simulation. Again no transition
+%%%    can be fired. Using intruder simulation, we can see that the message can be sent (to the intruder 
+%%%    that receives any message) but not received by T. Thus, the problem is located in the role T.
+%%%    T cannot receive the message (although it is correctly built). If we look at the reception pattern in the role T, 
+%%%    it is also correct. Thus, someting else prevents T from receiving the message. In the "variable monitoring menu", 
+%%%    chose to monitor variables of T, and select them all. Then by clicking on the pink rectangle on the fired transitions, 
+%%%    you can unfold the content of variables. If no transition is fired, no pink rectangle is displayed. By inspecting
+%%%    the values of the variable, you can see that the values for the variable Kat is incorrect. It is set to kbt.
+%%%    This is due to the session declaration that is buggy. Initialisation of role T is role_T(T,A,B,Kbt,Kbt,SND3,RCV3) 
+%%%    where Kbt appears twice. The first one should be Kat. Correct it.
+%%%
+%%% 3) After correcting this bug. Try again to start a protocol simulation. Again simulation is stuck but after the first 
+%%%    Transition. Using Intruder simulation, we can see that the second message can be sent by T but not received by B.
+%%%    Thus the mistake is in the reception of role B. There the pattern RCV({Kab}_Kbt) means that Kbt is already known 
+%%%    (which is correct) but also that Kab is already known (which is false). You should correct this by RCV({Kab'}_Kbt) 
+%%%    to state that B received a **new** value Kab.
