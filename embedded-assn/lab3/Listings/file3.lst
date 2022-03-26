@@ -1,0 +1,69 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 area             sumn, code
+    2 00000000                 export           __main
+    3 00000000         __main
+    4 00000000 F04F 000A       MOV              R0,#10
+    5 00000004         
+    6 00000004 F04F 0100       MOV              R1,#0
+    7 00000008 F04F 0200       MOV              R2, #0
+    8 0000000C         LOOP
+    9 0000000C 4281            CMP              R1, R0
+   10 0000000E DC03            BGT              stop
+   11 00000010 440A            ADD              R2,R2,R1
+   12 00000012 F101 0101       ADD              R1,R1,#1
+   13 00000016 E7F9            B                LOOP
+   14 00000018 E7FE    stop    B                stop
+   15 0000001A                 end
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
+erwork --depend=.\objects\file3.d -o.\objects\file3.o -I.\RTE\_Target_1 -I"C:\U
+sers\Nirbhay sharma\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\Include"
+ -I"C:\Users\Nirbhay sharma\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\D
+rivers\CMSIS\Device\ST\STM32F4xx\Include" --predefine="__EVAL SETA 1" --predefi
+ne="__UVISION_VERSION SETA 528" --predefine="_RTE_ SETA 1" --predefine="STM32F4
+07xx SETA 1" --list=.\listings\file3.lst file3.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+LOOP 0000000C
+
+Symbol: LOOP
+   Definitions
+      At line 8 in file file3.s
+   Uses
+      At line 13 in file file3.s
+Comment: LOOP used once
+__main 00000000
+
+Symbol: __main
+   Definitions
+      At line 3 in file file3.s
+   Uses
+      At line 2 in file file3.s
+Comment: __main used once
+stop 00000018
+
+Symbol: stop
+   Definitions
+      At line 14 in file file3.s
+   Uses
+      At line 10 in file file3.s
+      At line 14 in file file3.s
+
+sumn 00000000
+
+Symbol: sumn
+   Definitions
+      At line 1 in file file3.s
+   Uses
+      None
+Comment: sumn unused
+4 symbols
+339 symbols in table
