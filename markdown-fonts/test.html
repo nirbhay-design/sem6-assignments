@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checking Jquery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #change__color{
+            color:blue;
+        }
+
+#change__button{
+  color:purple;
+  background-color:white;
+  border:2px solid purple;
+  border-radius:3px;
+  padding:3px;
+}
+    </style>
+</head>
+<body>
+    <p id = "change__color"> This is the value to change on pressing button </p>
+    <p id="increment__number">0</p>
+    <button id="change__button">Change</button>
+</body>
+    <script>
+        // var btn = document.getElementById("change__button")
+        // btn.addEventListener('click',()=>{
+        //     var para = document.getElementById("change__color");
+        //     if (para.style.color == "purple"){
+        //         para.style.color = "blue";
+        //     }else {
+
+        //         para.style.color = "purple";
+        //     }
+        //     var incnum = document.getElementById("increment__number");
+        //     var val = parseInt(incnum.innerHTML);
+        //     var newval = val+1;
+        //     // console.log(newval);
+        //     incnum.innerHTML = `${newval}`;
+        // })
+        $("#change__button").on('click',()=>{
+            var para = $("#change__color");
+            var color = para.css('color');
+            // console.log(color);
+            if (color == 'rgb(128, 0, 128)'){
+                para.css({'color':'blue'});
+            } else {
+                para.css({'color':'purple'})
+            }
+            var num = $("#increment__number");
+            var final_num = (parseInt(num.text()) + 1).toString();
+            num.text(final_num);
+
+        })
+
+    </script>
+</html>
