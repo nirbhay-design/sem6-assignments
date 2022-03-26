@@ -5,7 +5,8 @@
 
 ### **Section 66**
 
-#### Section 66.A
+
+### Section 66.A
 
 - This section has *punishments for sending messages through communication service* etc.
 - messages including any offensive content, any information which is known to be false but circulated with the purpose of annoyance, inconvenience, danger, obstruction, insult, injury, hatred etc. 

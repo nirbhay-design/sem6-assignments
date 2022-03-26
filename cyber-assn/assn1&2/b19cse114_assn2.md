@@ -25,6 +25,15 @@
 - In this case the Joint Academic Network (JANET) was hacked by accused and after that he denied access to the authorized users by changing passwords, along with deleting and adding files, he also made changes in BSNL computer database in their internet users accounts.
 - the person accused of unethical access to system and hence he was sent to prison under the section 420 of IPC and section 66 of IT Act -2000.
 
+**Analysis of case studies**
+
+|case No.|analysis|
+|---|---|
+|1|The ex-employees were able to do the crime since they were aware of the details of some customers, since they know about PIN number of the customers they were able to do the crime|
+|2|The accused was able to do the crime since he was one of the close friend of the victim and that's why he was able to post offensive things about her on internet etc. so the loophole lies here is that if the criminal has sufficient information about the person he/she can exploit the information in order to trouble the victim.|
+|3|This is the straight forward case in which some persons have exploited the social media to spread wrong things etc.|
+|4|This is the case of getting remote access to a computer resource or system using some hacking techniques or other and eventually exploiting the system vulnerabilities and denying customers to use the services.|
+
 ---
 
 <style> 
