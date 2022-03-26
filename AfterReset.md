@@ -6,6 +6,7 @@
     - Remote - wsl
     - c/c++ compiler
     - tabnine
+    - Remote ssh
 - zoom
 - mingw
 - sublime text
