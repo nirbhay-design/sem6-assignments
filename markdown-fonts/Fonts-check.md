@@ -76,7 +76,7 @@ table, th, td {
 }
 
 *{
-    font-family:"Ubuntu Mono","Cascadia Mono";
+    /* font-family:"Ubuntu Mono","Cascadia Mono"; */
     /* font-weight:600; */
 }
 
