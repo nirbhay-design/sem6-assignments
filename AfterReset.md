@@ -7,6 +7,8 @@
     - c/c++ compiler
     - tabnine
     - Remote ssh
+    - Remote containers
+    - Remote ssh editing configurations
 - zoom
 - mingw
 - sublime text
