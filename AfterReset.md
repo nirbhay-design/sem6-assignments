@@ -30,6 +30,8 @@
     - cases to use normal -> any cases
 
     - terminal theme - aurora  
+    - pandoc -V geometry:margin=1cm B19CSE114.md -o B19CSE114.pdf
+
 - font
     - Ubuntu
     - Hack
