@@ -11,12 +11,12 @@ main(void)
 {
 
 	RCC->AHB1ENR = 0X41; // ENABLING CLOCK FOR PORT G & A
-	GPIOG->MODER = 0X1000000;
+	GPIOG->MODER = 0X14000000;
 	GPIOA->MODER = 0x0;
 	
 	while (1) {
 		if (GPIOA->IDR & 0X01) {
-			GPIOG->ODR = (1<<13);
+			GPIOG->ODR = (1<<13) | (1<<14);
 			while (GPIOA->IDR & 0X01) {
 				;
 			}

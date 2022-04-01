@@ -11,7 +11,7 @@ main(void)
 {
 
 	RCC->AHB1ENR = 0X40; // ENABLING CLOCK FOR PORT G
-	GPIOG->MODER = 0X5000000;
+	GPIOG->MODER = 0X14000000;
 	GPIOG->ODR = (1<<13) | (1<<14);
 	while (1) {
 		GPIOG->ODR = 0X0;
