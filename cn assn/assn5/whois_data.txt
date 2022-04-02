@@ -1,0 +1,552 @@
+######################### ip address 89.149.178.10 #########################
+netname:        NACNET-EU
+ases_value: 3257
+
+######################### ip address 137.164.16.84 #########################
+NetName:        CALREN
+ases_value: 2152
+
+######################### ip address 80.91.255.62 #########################
+netname:        TELIA-TIC-NET-1
+ases_value: 1299
+
+######################### ip address 147.28.7.2 #########################
+NetName:        RIPE
+netname:        RGNET-RSCH-147-0
+ases_value: 3130
+
+######################### ip address 144.228.241.130 #########################
+NetName:        SPRINTLINK
+ases_value: 1239
+
+######################### ip address 137.164.16.84 #########################
+NetName:        CALREN
+ases_value: 2152
+
+######################### ip address 213.144.128.203 #########################
+netname:        INIT7NET
+ases_value: 13030
+
+######################### ip address 206.24.210.80 #########################
+NetName:        CENTURYLINK-LEGACY-SAVVIS-BLK171
+ases_value: 3561
+
+######################### ip address 198.129.33.85 #########################
+NetName:        ESNET-CIDR-B
+ases_value: 293
+
+######################### ip address 206.24.210.80 #########################
+NetName:        CENTURYLINK-LEGACY-SAVVIS-BLK171
+ases_value: 3561
+
+######################### ip address 89.149.178.10 #########################
+netname:        NACNET-EU
+ases_value: 3257
+
+######################### ip address 66.185.128.1 #########################
+NetName:        ATDN
+ases_value: 1668
+
+######################### ip address 68.67.63.245 #########################
+connect: Connection refused
+NetName:        FIBRENOIRE-INTERNET
+ases_value: 22652
+
+######################### ip address 216.18.31.102 #########################
+NetName:        GT-NTL-BLK1
+NetName:        GT-216-18-28-0-INTERNAL
+ases_value: 6539
+
+######################### ip address 194.153.0.253 #########################
+netname:        UK-PIPEX
+ases_value: 5413
+
+######################### ip address 202.232.0.3 #########################
+b. [Network Name]               IIJNET
+ases_value: 2497
+
+######################### ip address 66.185.128.1 #########################
+NetName:        ATDN
+ases_value: 1668
+
+######################### ip address 203.62.252.186 #########################
+netname:        TELSTRAINTERNET100-AU
+ases_value: 1221
+
+######################### ip address 216.18.31.102 #########################
+NetName:        GT-NTL-BLK1
+NetName:        GT-216-18-28-0-INTERNAL
+ases_value: 6539
+
+######################### ip address 144.228.241.130 #########################
+NetName:        SPRINTLINK
+ases_value: 1239
+
+######################### ip address 216.221.157.162 #########################
+NetName:        TINET
+NetName:        TINET-TINET
+ases_value: 40191
+
+######################### ip address 216.218.252.164 #########################
+NetName:        HURRICANE-1
+ases_value: 6939
+
+######################### ip address 66.185.128.1 #########################
+NetName:        ATDN
+ases_value: 1668
+
+######################### ip address 96.4.0.55 #########################
+NetName:        ENA
+ases_value: 11686
+
+######################### ip address 198.129.33.85 #########################
+NetName:        ESNET-CIDR-B
+ases_value: 293
+
+######################### ip address 213.144.128.203 #########################
+netname:        INIT7NET
+ases_value: 13030
+
+######################### ip address 41.217.212.5 #########################
+netname:        Seacom-backbone
+ases_value: 37100
+
+######################### ip address 12.0.1.63 #########################
+NetName:        ATT
+NetName:        ATT-LIN618-1
+ases_value: 7018
+
+######################### ip address 4.69.184.193 #########################
+NetName:        LVLT-ORG-4-8
+ases_value: 3356
+
+######################### ip address 67.17.82.114 #########################
+NetName:        LVLT-ORG-67-16
+ases_value: 3549
+
+######################### ip address 80.91.255.62 #########################
+netname:        TELIA-TIC-NET-1
+ases_value: 1299
+
+######################### ip address 157.130.10.233 #########################
+NetName:        UUNETCUSTB40
+ases_value: 701
+
+######################### ip address 195.22.216.188 #########################
+netname:        SEA-BONE
+ases_value: 6762
+
+######################### ip address 85.114.0.217 #########################
+netname:        RU-OBIT-NET1
+ases_value: 8492
+
+######################### ip address 12.0.1.63 #########################
+NetName:        ATT
+NetName:        ATT-LIN618-1
+ases_value: 7018
+
+######################### ip address 202.232.0.3 #########################
+b. [Network Name]               IIJNET
+ases_value: 2497
+
+######################### ip address 144.228.241.130 #########################
+NetName:        SPRINTLINK
+ases_value: 1239
+
+######################### ip address 198.129.33.85 #########################
+NetName:        ESNET-CIDR-B
+ases_value: 293
+
+######################### ip address 202.232.0.3 #########################
+b. [Network Name]               IIJNET
+ases_value: 2497
+
+######################### ip address 137.164.16.84 #########################
+NetName:        CALREN
+ases_value: 2152
+
+######################### ip address 129.250.0.11 #########################
+NetName:        NTTA-129-250
+ases_value: 2914
+
+######################### ip address 208.51.134.246 #########################
+NetName:        LVLT-ORG-208-50-192
+ases_value: 3549
+
+######################### ip address 67.17.82.114 #########################
+NetName:        LVLT-ORG-67-16
+ases_value: 3549
+
+######################### ip address 195.22.216.188 #########################
+netname:        SEA-BONE
+ases_value: 6762
+
+######################### ip address 216.218.252.164 #########################
+NetName:        HURRICANE-1
+ases_value: 6939
+
+######################### ip address 203.181.248.168 #########################
+b. [Network Name]               APAN-JP
+ases_value: 7660
+
+######################### ip address 154.11.98.225 #########################
+NetName:        TELUS-154-11-0-0
+ases_value: 852
+
+######################### ip address 64.57.28.241 #########################
+NetName:        I2-NEWNET
+ases_value: 11537
+
+######################### ip address 68.67.63.245 #########################
+connect: Connection refused
+NetName:        FIBRENOIRE-INTERNET
+ases_value: 22652
+
+######################### ip address 147.28.7.1 #########################
+NetName:        RIPE
+netname:        RGNET-RSCH-147-0
+ases_value: 3130
+
+######################### ip address 4.69.184.193 #########################
+NetName:        LVLT-ORG-4-8
+ases_value: 3356
+
+######################### ip address 216.221.157.162 #########################
+NetName:        TINET
+NetName:        TINET-TINET
+ases_value: 40191
+
+######################### ip address 203.62.252.186 #########################
+netname:        TELSTRAINTERNET100-AU
+ases_value: 1221
+
+######################### ip address 216.218.252.164 #########################
+NetName:        HURRICANE-1
+ases_value: 6939
+
+######################### ip address 164.128.32.11 #########################
+netname:        IPP-BACKBONE
+ases_value: 3303
+
+######################### ip address 168.209.255.23 #########################
+NetName:        AFRINIC-168-209-0-0
+netname:        NEDNET2
+ases_value: 3741
+
+######################### ip address 41.217.212.5 #########################
+netname:        Seacom-backbone
+ases_value: 37100
+
+######################### ip address 147.28.7.1 #########################
+NetName:        RIPE
+netname:        RGNET-RSCH-147-0
+ases_value: 3130
+
+######################### ip address 198.129.33.85 #########################
+NetName:        ESNET-CIDR-B
+ases_value: 293
+
+######################### ip address 12.0.1.63 #########################
+NetName:        ATT
+NetName:        ATT-LIN618-1
+ases_value: 7018
+
+######################### ip address 80.91.255.62 #########################
+netname:        TELIA-TIC-NET-1
+ases_value: 1299
+
+######################### ip address 12.0.1.63 #########################
+NetName:        ATT
+NetName:        ATT-LIN618-1
+ases_value: 7018
+
+######################### ip address 157.130.10.233 #########################
+NetName:        UUNETCUSTB40
+ases_value: 701
+
+######################### ip address 147.28.7.2 #########################
+NetName:        RIPE
+netname:        RGNET-RSCH-147-0
+ases_value: 3130
+
+######################### ip address 164.128.32.11 #########################
+netname:        IPP-BACKBONE
+ases_value: 3303
+
+######################### ip address 194.153.0.253 #########################
+netname:        UK-PIPEX
+ases_value: 5413
+
+######################### ip address 147.28.7.2 #########################
+NetName:        RIPE
+netname:        RGNET-RSCH-147-0
+ases_value: 3130
+
+######################### ip address 85.114.0.217 #########################
+netname:        RU-OBIT-NET1
+ases_value: 8492
+
+######################### ip address 168.209.255.23 #########################
+NetName:        AFRINIC-168-209-0-0
+netname:        NEDNET2
+ases_value: 3741
+
+######################### ip address 85.114.0.217 #########################
+netname:        RU-OBIT-NET1
+ases_value: 8492
+
+######################### ip address 203.181.248.168 #########################
+b. [Network Name]               APAN-JP
+ases_value: 7660
+
+######################### ip address 129.250.0.11 #########################
+NetName:        NTTA-129-250
+ases_value: 2914
+
+######################### ip address 137.164.16.84 #########################
+NetName:        CALREN
+ases_value: 2152
+
+######################### ip address 157.130.10.233 #########################
+NetName:        UUNETCUSTB40
+ases_value: 701
+
+######################### ip address 216.218.252.164 #########################
+NetName:        HURRICANE-1
+ases_value: 6939
+
+######################### ip address 154.11.98.225 #########################
+cannot query at this time 
+ases_value: 852
+
+######################### ip address 89.149.178.10 #########################
+netname:        NACNET-EU
+ases_value: 3257
+
+######################### ip address 164.128.32.11 #########################
+netname:        IPP-BACKBONE
+ases_value: 3303
+
+######################### ip address 89.149.178.10 #########################
+netname:        NACNET-EU
+ases_value: 3257
+
+######################### ip address 202.232.0.3 #########################
+b. [Network Name]               IIJNET
+ases_value: 2497
+
+######################### ip address 164.128.32.11 #########################
+netname:        IPP-BACKBONE
+ases_value: 3303
+
+######################### ip address 213.144.128.203 #########################
+netname:        INIT7NET
+ases_value: 13030
+
+######################### ip address 203.62.252.186 #########################
+netname:        TELSTRAINTERNET100-AU
+ases_value: 1221
+
+######################### ip address 203.181.248.168 #########################
+b. [Network Name]               APAN-JP
+ases_value: 7660
+
+######################### ip address 64.57.28.241 #########################
+NetName:        I2-NEWNET
+ases_value: 11537
+
+######################### ip address 208.51.134.246 #########################
+NetName:        LVLT-ORG-208-50-192
+ases_value: 3549
+
+######################### ip address 134.222.87.1 #########################
+NetName:        RIPE-ERX-134-219-0-0
+netname:        EUNET-BACKBONE
+ases_value: 286
+
+######################### ip address 4.69.184.193 #########################
+NetName:        LVLT-ORG-4-8
+ases_value: 3356
+
+######################### ip address 216.221.157.162 #########################
+NetName:        TINET
+NetName:        TINET-TINET
+ases_value: 40191
+
+######################### ip address 208.51.134.246 #########################
+NetName:        LVLT-ORG-208-50-192
+ases_value: 3549
+
+######################### ip address 67.17.82.114 #########################
+NetName:        LVLT-ORG-67-16
+ases_value: 3549
+
+######################### ip address 147.28.7.1 #########################
+NetName:        RIPE
+netname:        RGNET-RSCH-147-0
+ases_value: 3130
+
+######################### ip address 203.181.248.168 #########################
+b. [Network Name]               APAN-JP
+ases_value: 7660
+
+######################### ip address 195.22.216.188 #########################
+netname:        SEA-BONE
+ases_value: 6762
+
+######################### ip address 96.4.0.55 #########################
+NetName:        ENA
+ases_value: 11686
+
+######################### ip address 157.130.10.233 #########################
+NetName:        UUNETCUSTB40
+ases_value: 701
+
+######################### ip address 203.62.252.186 #########################
+netname:        TELSTRAINTERNET100-AU
+ases_value: 1221
+
+######################### ip address 194.153.0.253 #########################
+netname:        UK-PIPEX
+ases_value: 5413
+
+######################### ip address 147.28.7.2 #########################
+NetName:        RIPE
+netname:        RGNET-RSCH-147-0
+ases_value: 3130
+
+######################### ip address 96.4.0.55 #########################
+NetName:        ENA
+ases_value: 11686
+
+######################### ip address 134.222.87.1 #########################
+NetName:        RIPE-ERX-134-219-0-0
+netname:        EUNET-BACKBONE
+ases_value: 286
+
+######################### ip address 129.250.0.11 #########################
+NetName:        NTTA-129-250
+ases_value: 2914
+
+######################### ip address 41.217.212.5 #########################
+netname:        Seacom-backbone
+ases_value: 37100
+
+######################### ip address 129.250.0.11 #########################
+NetName:        NTTA-129-250
+ases_value: 2914
+
+######################### ip address 154.11.98.225 #########################
+NetName:        TELUS-154-11-0-0
+ases_value: 852
+
+######################### ip address 68.67.63.245 #########################
+connect: Connection refused
+NetName:        FIBRENOIRE-INTERNET
+ases_value: 22652
+
+######################### ip address 213.144.128.203 #########################
+netname:        INIT7NET
+ases_value: 13030
+
+######################### ip address 206.24.210.80 #########################
+NetName:        CENTURYLINK-LEGACY-SAVVIS-BLK171
+ases_value: 3561
+
+######################### ip address 68.67.63.245 #########################
+connect: Connection refused
+NetName:        FIBRENOIRE-INTERNET
+ases_value: 22652
+
+######################### ip address 216.18.31.102 #########################
+NetName:        GT-NTL-BLK1
+NetName:        GT-216-18-28-0-INTERNAL
+ases_value: 6539
+
+######################### ip address 216.18.31.102 #########################
+NetName:        GT-NTL-BLK1
+NetName:        GT-216-18-28-0-INTERNAL
+ases_value: 6539
+
+######################### ip address 134.222.87.1 #########################
+NetName:        RIPE-ERX-134-219-0-0
+netname:        EUNET-BACKBONE
+ases_value: 286
+
+######################### ip address 134.222.87.1 #########################
+NetName:        RIPE-ERX-134-219-0-0
+netname:        EUNET-BACKBONE
+ases_value: 286
+
+######################### ip address 154.11.98.225 #########################
+NetName:        TELUS-154-11-0-0
+ases_value: 852
+
+######################### ip address 67.17.82.114 #########################
+NetName:        LVLT-ORG-67-16
+ases_value: 3549
+
+######################### ip address 144.228.241.130 #########################
+NetName:        SPRINTLINK
+ases_value: 1239
+
+######################### ip address 66.185.128.1 #########################
+NetName:        ATDN
+ases_value: 1668
+
+######################### ip address 195.22.216.188 #########################
+netname:        SEA-BONE
+ases_value: 6762
+
+######################### ip address 85.114.0.217 #########################
+netname:        RU-OBIT-NET1
+ases_value: 8492
+
+######################### ip address 208.51.134.246 #########################
+NetName:        LVLT-ORG-208-50-192
+ases_value: 3549
+
+######################### ip address 168.209.255.23 #########################
+NetName:        AFRINIC-168-209-0-0
+netname:        NEDNET2
+ases_value: 3741
+
+######################### ip address 96.4.0.55 #########################
+NetName:        ENA
+ases_value: 11686
+
+######################### ip address 168.209.255.23 #########################
+NetName:        AFRINIC-168-209-0-0
+netname:        NEDNET2
+ases_value: 3741
+
+######################### ip address 216.221.157.162 #########################
+NetName:        TINET
+NetName:        TINET-TINET
+ases_value: 40191
+
+######################### ip address 4.69.184.193 #########################
+NetName:        LVLT-ORG-4-8
+ases_value: 3356
+
+######################### ip address 80.91.255.62 #########################
+netname:        TELIA-TIC-NET-1
+ases_value: 1299
+
+######################### ip address 41.217.212.5 #########################
+netname:        Seacom-backbone
+ases_value: 37100
+
+######################### ip address 194.153.0.253 #########################
+netname:        UK-PIPEX
+ases_value: 5413
+
+######################### ip address 147.28.7.1 #########################
+NetName:        RIPE
+netname:        RGNET-RSCH-147-0
+ases_value: 3130
+
+######################### ip address 206.24.210.80 #########################
+NetName:        CENTURYLINK-LEGACY-SAVVIS-BLK171
+ases_value: 3561
+

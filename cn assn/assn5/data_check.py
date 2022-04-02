@@ -26,6 +26,10 @@ values_idx = {'prefix':5,'type':0,'time':1,'baw':2,'fip':3,'fas':4,'aspath':6}
 set_pref = set()
 set_as = set()
 set_a = set()
+top_10_ases = {}
+ases_ip_map = {}
+
+print(f'\nplease wait it will take a while (around 3 Mins) ')
 
 for idx,line in enumerate(lines):
     entries = line.split('|')
@@ -34,7 +38,6 @@ for idx,line in enumerate(lines):
     # ips = re.findall(reg,entries[values_idx['prefix']])
     # if (len(ips) != 0):
         # set_a.add((entries[values_idx['prefix']],entries[values_idx['aspath']]))
-
     pref = entries[values_idx['prefix']]
     if (pref[-2:] == '24'):
         pref = pref[:-3]
@@ -42,6 +45,27 @@ for idx,line in enumerate(lines):
         if values[0] == 103 and values[1] == 21 and (values[2] <= 127 and values[2] >= 124) and (values[3] >= 0 and values[3] <= 255):
             set_a.add((entries[values_idx['fip']],entries[values_idx['prefix']],entries[values_idx['aspath']]))
 
+    ases_path = entries[values_idx['aspath']].split(' ')
+    as__es = entries[values_idx['fas']]
+    if as__es not in ases_ip_map:
+        ases_ip_map[as__es] = set();
+    ases_ip_map[as__es].add(entries[values_idx['fip']])
+    if (len(ases_path) <= 1):
+        continue
+    for jdx,as_es in enumerate(ases_path):
+        if (as_es not in top_10_ases):
+            top_10_ases[as_es] = set()
+        if (jdx == 0):
+            top_10_ases[as_es].add(ases_path[jdx+1])
+        elif (jdx == len(ases_path) - 1):
+            top_10_ases[as_es].add(ases_path[jdx-1])
+        else:
+            top_10_ases[as_es].add(ases_path[jdx-1])
+            top_10_ases[as_es].add(ases_path[jdx+1])
+
+top10as = sorted(list(map(lambda x: (x[0],len(top_10_ases[x[0]])),top_10_ases.items())),key=lambda x:x[1], reverse=True)[:10]
+
+top10_values = list(map(lambda x: (ases_ip_map.get(x[0],"NA"),x[0],x[1]),top10as))
 
 print(f'unique prefix: {len(set_pref)}')
 print(f'unique as: {len(set_as)}')
@@ -50,9 +74,16 @@ print(f'entries in set A: {len(set_a)}')
 write_to_file('unique_prefix.txt',set_pref)
 write_to_file('unique_as.txt',set_as)
 write_to_file('a.txt',set_a)
+write_to_file('top_10_ases.txt',top10_values)
 
 t2 = time.perf_counter()
 
 print(f'completed in {(t2-t1):.3f} Sec')
 exit(0)
 
+'''
+unique prefix: 525483
+unique as: 34        
+entries in set A: 130
+completed in 150.924 Sec
+'''
