@@ -95,7 +95,7 @@ class Prime_generator_machine(object):
         return final_prime;
 
 
-pgm = Prime_generator_machine(511)
+pgm = Prime_generator_machine(512)
 
 def generate_sophie_germain_prime(pgm,thresh):
     sgp = None;
@@ -117,23 +117,23 @@ def generate_sophie_germain_prime(pgm,thresh):
 
         # print('p_dash:',p_dash)
         # print('generated sophie germain prime:',sophie_germain_prime)
-    print('p_dash:',p_dash)
-    return ((sgp,iterations) if sgp is not None else ("None",iterations));
+    # print('p_dash:',p_dash)
+    return ((p_dash,sgp,iterations) if sgp is not None else ("None","None",iterations));
 
 
 
-
-sophie_germain_prime,iterations = generate_sophie_germain_prime(pgm,200)
-print('sphie_germain_prime: ',sophie_germain_prime)
-write_to_file('sophie-germain-prime.txt',{"iter":iterations,"sgp":sophie_germain_prime})
-if sophie_germain_prime == "None":
-    print('cannot find sophie germain prime till 200 iterations !!! Try running again')
+thresh = 1000
+sophie_germain_prime,condition_sophie_germain,iterations = generate_sophie_germain_prime(pgm,thresh)
+if condition_sophie_germain == "None":
+    print(f'cannot find sophie germain prime till {thresh} iterations !!! Try running again')
     exit(0)
+print('sphie_germain_prime: ',sophie_germain_prime)
 generator = find_generator(sophie_germain_prime)
+write_to_file('sophie-germain-prime.txt',{"iter":iterations,"sgp":sophie_germain_prime,"2p+1":condition_sophie_germain,"generator":generator})
 # for a prime order group every element is a generator
 print('found generator: ',generator)
 
-exit(0)
+# exit(0)
 
 class Alice(object):
     def __init__(self,g):
@@ -167,8 +167,9 @@ def diffie_hilmann_exchange(g):
     final_key_at_alice = alice._generate_final_key(bob_generated_key)
     final_key_at_bob = bob._generate_final_key(alice_generated_key)
 
-    print(final_key_at_alice,final_key_at_bob)
-    print(final_key_at_alice==final_key_at_bob)
+    print("key_at_alice end:",final_key_at_alice)
+    print('key_at_bob end:',final_key_at_bob)
+    # print(final_key_at_alice==final_key_at_bob)
     
 
 diffie_hilmann_exchange(23)
