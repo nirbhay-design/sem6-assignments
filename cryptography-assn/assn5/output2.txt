@@ -1,201 +1,201 @@
-5432 ---------- 
-len: 1 
-('9hnwslfbv@iitj.ac.in', '924w5.bzqu@iitj.ac.in') 
+iterations: 45 ----------
+len: 1
+('528k6r3qa@iitj.ac.in', '52qcb74hse@iitj.ac.in')
 
-148903 ---------- 
-len: 1 
-('b6oigzqtr@iitj.ac.in', 'txulcirdwf@iitj.ac.in') 
+iterations: 26 ----------
+len: 1
+('wb69jq27u@iitj.ac.in', 'o2p.5e9m3n@iitj.ac.in')
 
-110582 ---------- 
-len: 1 
-('3vogx.ru4@iitj.ac.in', 'vgyq6iekms@iitj.ac.in') 
+iterations: 28 ----------
+len: 1
+('xw1son7h3@iitj.ac.in', 'uonqsvrlp0@iitj.ac.in')
 
-45741 ---------- 
-len: 1 
-('nwhlgqtd8@iitj.ac.in', '0i63kmsybw@iitj.ac.in') 
+iterations: 763 ----------
+len: 1
+('pcq502et8@iitj.ac.in', 'ocyq4zgtda@iitj.ac.in')
 
-28332 ---------- 
-len: 1 
-('6mi8sdxun@iitj.ac.in', '.rnu3bwv1d@iitj.ac.in') 
+iterations: 304 ----------
+len: 1
+('pae37qvzb@iitj.ac.in', 'ur6phfvg7q@iitj.ac.in')
 
-27635 ---------- 
-len: 1 
-('pc1ljgo7t@iitj.ac.in', 'vroazqypc1@iitj.ac.in') 
+iterations: 388 ----------
+len: 1
+('uwnkr2v53@iitj.ac.in', 'tv5kuec9db@iitj.ac.in')
 
-30203 ---------- 
-len: 1 
-('btkaeid3h@iitj.ac.in', 'jqes0wikg5@iitj.ac.in') 
+iterations: 863 ----------
+len: 1
+('3l6soyqku@iitj.ac.in', 'u1fpr60od.@iitj.ac.in')
 
-12644 ---------- 
-len: 1 
-('do2pjrkv0@iitj.ac.in', 'pq9gm4j6r5@iitj.ac.in') 
+iterations: 13 ----------
+len: 1
+('.i25v3uwm@iitj.ac.in', '2uz4nf.b0i@iitj.ac.in')
 
-34495 ---------- 
-len: 1 
-('xj80fb7qz@iitj.ac.in', 'uta3n7ix12@iitj.ac.in') 
+iterations: 252 ----------
+len: 1
+('et6pnhois@iitj.ac.in', 'jgkq35x679@iitj.ac.in')
 
-66668 ---------- 
-len: 1 
-('d8j5w.2x4@iitj.ac.in', 'bmoe3hur21@iitj.ac.in') 
+iterations: 66 ----------
+len: 1
+('vbkp702c6@iitj.ac.in', '.cz5sy0ioa@iitj.ac.in')
 
-12204 ---------- 
-len: 1 
-('7jaqf5hrs@iitj.ac.in', 'lw63nk2d4g@iitj.ac.in') 
+iterations: 657 ----------
+len: 1
+('4l96hj.ix@iitj.ac.in', '.eqsg0mz7k@iitj.ac.in')
 
-14420 ---------- 
-len: 1 
-('.kr6xe1u3@iitj.ac.in', 'ohga.r48sn@iitj.ac.in') 
+iterations: 591 ----------
+len: 1
+('ol7vrps49@iitj.ac.in', 'dqt5n6k94u@iitj.ac.in')
 
-114272 ---------- 
-len: 1 
-('oy1qr7p9x@iitj.ac.in', 'ze0.7n6dk4@iitj.ac.in') 
+iterations: 17 ----------
+len: 1
+('hvrscxmt0@iitj.ac.in', '3ra9yvkwsn@iitj.ac.in')
 
-9473 ---------- 
-len: 1 
-('a9lhwdzmo@iitj.ac.in', 'm2fc95tw4b@iitj.ac.in') 
+iterations: 266 ----------
+len: 1
+('siqy4k9.h@iitj.ac.in', 'nq1epjagtl@iitj.ac.in')
 
-147262 ---------- 
-len: 1 
-('o8sbnw37u@iitj.ac.in', 'ome50ru4d.@iitj.ac.in') 
+iterations: 692 ----------
+len: 1
+('cixfhk3wy@iitj.ac.in', 'yrfpn.8iaq@iitj.ac.in')
 
-77351 ---------- 
-len: 1 
-('1avqrpbm.@iitj.ac.in', 'mko6h9783t@iitj.ac.in') 
+iterations: 73 ----------
+len: 1
+('ifblt1m6u@iitj.ac.in', 'r54iovfbu8@iitj.ac.in')
 
-22536 ---------- 
-len: 1 
-('nyw4iu0fl@iitj.ac.in', 'hol5fptuxm@iitj.ac.in') 
+iterations: 120 ----------
+len: 1
+('ctbi3v42a@iitj.ac.in', 'e9psmjxfty@iitj.ac.in')
 
-152 ---------- 
-len: 1 
-('tm5hwfela@iitj.ac.in', 'ckrltmpv6f@iitj.ac.in') 
+iterations: 1203 ----------
+len: 1
+('4dky73how@iitj.ac.in', '5cpq29ynoa@iitj.ac.in')
 
-29236 ---------- 
-len: 1 
-('lbu0scrnj@iitj.ac.in', 'wo0m2s38ue@iitj.ac.in') 
+iterations: 909 ----------
+len: 1
+('vetqm7uiw@iitj.ac.in', '9iebgs4lw3@iitj.ac.in')
 
-6288 ---------- 
-len: 1 
-('u0bg4d6.k@iitj.ac.in', 'ykv8etpuj9@iitj.ac.in') 
+iterations: 47 ----------
+len: 1
+('j12h74nrm@iitj.ac.in', '2fbz0a5iln@iitj.ac.in')
 
-14994 ---------- 
-len: 1 
-('hvd4xakfs@iitj.ac.in', '1v02dsfi45@iitj.ac.in') 
+iterations: 45 ----------
+len: 1
+('cxp7w1k2h@iitj.ac.in', 'mj39yu6kwh@iitj.ac.in')
 
-130412 ---------- 
-len: 1 
-('vd50cmtuz@iitj.ac.in', 'viwj8ftusz@iitj.ac.in') 
+iterations: 168 ----------
+len: 1
+('uceoltdgi@iitj.ac.in', 'h6a4miz2ev@iitj.ac.in')
 
-52819 ---------- 
-len: 1 
-('l8pqs3cid@iitj.ac.in', 'z1os4jth5d@iitj.ac.in') 
+iterations: 251 ----------
+len: 1
+('d0c3m1sve@iitj.ac.in', 'ifas7dvhyt@iitj.ac.in')
 
-1590 ---------- 
-len: 1 
-('zgjdxvf5b@iitj.ac.in', 'liumegka48@iitj.ac.in') 
+iterations: 122 ----------
+len: 1
+('ulxrd3pzf@iitj.ac.in', '9wjk2m0lec@iitj.ac.in')
 
-4988 ---------- 
-len: 1 
-('6nofcygk9@iitj.ac.in', 'dm1ozagru.@iitj.ac.in') 
+iterations: 527 ----------
+len: 1
+('31o7kdbew@iitj.ac.in', 'tc6vjp5fgb@iitj.ac.in')
 
-118224 ---------- 
-len: 1 
-('f0ohazi3k@iitj.ac.in', 'nst5yvumj7@iitj.ac.in') 
+iterations: 455 ----------
+len: 1
+('a8wz95g7v@iitj.ac.in', 'iwohzl037m@iitj.ac.in')
 
-3928 ---------- 
-len: 1 
-('7alzoj1mf@iitj.ac.in', 'lj3cw7eyg2@iitj.ac.in') 
+iterations: 253 ----------
+len: 1
+('oiwub9m7h@iitj.ac.in', 'wiek3psfcl@iitj.ac.in')
 
-1009 ---------- 
-len: 1 
-('xc2hm1rif@iitj.ac.in', '150nprz2m6@iitj.ac.in') 
+iterations: 74 ----------
+len: 1
+('uj4.5tmnw@iitj.ac.in', '63kymd7ifz@iitj.ac.in')
 
-110870 ---------- 
-len: 1 
-('8jt0a195l@iitj.ac.in', 'yji2un7l5a@iitj.ac.in') 
+iterations: 181 ----------
+len: 1
+('zohpn.d4v@iitj.ac.in', 'zwu.0qvs8h@iitj.ac.in')
 
-69791 ---------- 
-len: 1 
-('dcwls5uj0@iitj.ac.in', 'f2qvxm0kz9@iitj.ac.in') 
+iterations: 369 ----------
+len: 1
+('kdipasuj8@iitj.ac.in', 'qwox81ec2i@iitj.ac.in')
 
-10421 ---------- 
-len: 1 
-('4gc3kn9j1@iitj.ac.in', 'nr3f4a7k65@iitj.ac.in') 
+iterations: 85 ----------
+len: 1
+('etszxldqn@iitj.ac.in', 'ojhks.3zbx@iitj.ac.in')
 
-23928 ---------- 
-len: 1 
-('18chjl0u3@iitj.ac.in', 'fnj.9z3yi8@iitj.ac.in') 
+iterations: 100 ----------
+len: 1
+('pgvnd6u.7@iitj.ac.in', '1svo05xchi@iitj.ac.in')
 
-31253 ---------- 
-len: 1 
-('xs0kbfwy3@iitj.ac.in', '2am3zibe1n@iitj.ac.in') 
+iterations: 144 ----------
+len: 1
+('ke9iy2mj7@iitj.ac.in', 'z18uvoskph@iitj.ac.in')
 
-37892 ---------- 
-len: 1 
-('dox2fbsne@iitj.ac.in', '712mnh8rx6@iitj.ac.in') 
+iterations: 288 ----------
+len: 1
+('tunk5g4b1@iitj.ac.in', 'henku3sgt5@iitj.ac.in')
 
-124354 ---------- 
-len: 1 
-('qdr2pl.8j@iitj.ac.in', 'rswh2t3iqv@iitj.ac.in') 
+iterations: 355 ----------
+len: 1
+('m8lgdf3ct@iitj.ac.in', '7x89um1vzo@iitj.ac.in')
 
-21781 ---------- 
-len: 1 
-('o.cyafz8b@iitj.ac.in', '6uybjkc3g1@iitj.ac.in') 
+iterations: 4 ----------
+len: 1
+('6khje32.n@iitj.ac.in', 'mct13d.7q5@iitj.ac.in')
 
-24041 ---------- 
-len: 1 
-('0lwhmztj9@iitj.ac.in', '76okwliutz@iitj.ac.in') 
+iterations: 536 ----------
+len: 1
+('kbzvw2c94@iitj.ac.in', '4jhrwlfons@iitj.ac.in')
 
-21144 ---------- 
-len: 1 
-('4i5apexmz@iitj.ac.in', 'fubmlwhe5t@iitj.ac.in') 
+iterations: 152 ----------
+len: 1
+('b43152ain@iitj.ac.in', 'pqw01z86hs@iitj.ac.in')
 
-9316 ---------- 
-len: 1 
-('cuapv5k7j@iitj.ac.in', '7yjpl0f.mz@iitj.ac.in') 
+iterations: 77 ----------
+len: 1
+('vz073x6os@iitj.ac.in', 'mbcu2wseoq@iitj.ac.in')
 
-126760 ---------- 
-len: 1 
-('96swya4qo@iitj.ac.in', 'wosgalcd.n@iitj.ac.in') 
+iterations: 318 ----------
+len: 1
+('xbjwehctu@iitj.ac.in', 'icz9uyp3w5@iitj.ac.in')
 
-94105 ---------- 
-len: 1 
-('03sc.8lg9@iitj.ac.in', '2s6ypcn0jd@iitj.ac.in') 
+iterations: 71 ----------
+len: 1
+('xomniq.zw@iitj.ac.in', 'lj2ob1x7a3@iitj.ac.in')
 
-247346 ---------- 
-len: 1 
-('pgdzi6lft@iitj.ac.in', 'rxoh9p8u5m@iitj.ac.in') 
+iterations: 92 ----------
+len: 1
+('qrwdmtx7.@iitj.ac.in', 'kv7e5f.mbc@iitj.ac.in')
 
-8793 ---------- 
-len: 1 
-('n0f521qbe@iitj.ac.in', 'qscvzmlfig@iitj.ac.in') 
+iterations: 169 ----------
+len: 1
+('iw24s76ay@iitj.ac.in', 'e9vsh7b4j5@iitj.ac.in')
 
-38942 ---------- 
-len: 1 
-('i8o16ejnk@iitj.ac.in', 'xyjmtlahzi@iitj.ac.in') 
+iterations: 105 ----------
+len: 1
+('u5kypd4aw@iitj.ac.in', 'xbr6f7e4jc@iitj.ac.in')
 
-11907 ---------- 
-len: 1 
-('9sevj3iwm@iitj.ac.in', 'se.trw738o@iitj.ac.in') 
+iterations: 238 ----------
+len: 1
+('slpjxk70i@iitj.ac.in', 'yxug7qlabv@iitj.ac.in')
 
-31988 ---------- 
-len: 1 
-('xw0y4duts@iitj.ac.in', 'f8kblynq54@iitj.ac.in') 
+iterations: 484 ----------
+len: 1
+('rt5x8hyf9@iitj.ac.in', 'fobw7.jhrs@iitj.ac.in')
 
-90255 ---------- 
-len: 1 
-('.1u60nkes@iitj.ac.in', 'vp4dw8ge30@iitj.ac.in') 
+iterations: 144 ----------
+len: 1
+('ofxgknhdp@iitj.ac.in', 'alwsdc53vg@iitj.ac.in')
 
-193638 ---------- 
-len: 1 
-('b6tgrnpy5@iitj.ac.in', 'fpb35sq0rl@iitj.ac.in') 
+iterations: 553 ----------
+len: 1
+('s84fm63g.@iitj.ac.in', '3dmo276hlf@iitj.ac.in')
 
-122282 ---------- 
-len: 1 
-('orgkxf.lt@iitj.ac.in', '21an86zsfc@iitj.ac.in') 
+iterations: 84 ----------
+len: 1
+('d6.vhmte5@iitj.ac.in', 'rewp2q5osh@iitj.ac.in')
 
-87961 ---------- 
-len: 1 
-('v7hjt3crp@iitj.ac.in', 'adk.ue93cm@iitj.ac.in') 
+iterations: 229 ----------
+len: 1
+('fk5bztpa9@iitj.ac.in', '1sou.xd4lm@iitj.ac.in')
 
-56211
+279

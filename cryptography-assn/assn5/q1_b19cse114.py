@@ -1,5 +1,5 @@
 from Crypto.Hash import SHA256
-import random,time
+import random,time,os
 
 def find_hash(text):
    new_hash = SHA256.new()
@@ -7,7 +7,7 @@ def find_hash(text):
    return new_hash.hexdigest()
 
 def condition(text1,text2):
-   return (text1[:4] == text2[:4])
+   return (text1[:2] == text2[:2])
 
 def generate_random(num):
    text = list('abcdefghijklmnopqrstuvwxyz0123456789.')
@@ -16,7 +16,7 @@ def generate_random(num):
 
 def write_to_file(filename,iterations,array):
    with open(filename,'a') as f:
-      string = f'{iterations} ---------- \nlen: {len(array)} \n{" ".join(map(lambda x:str(x),array))} \n\n'
+      string = f'iterations: {iterations} ----------\nlen: {len(array)}\n{" ".join(map(lambda x:str(x),array))}\n\n'
       f.write(string)
 
 def generate_pairs(size1,size2):
@@ -111,6 +111,11 @@ def check_pairs():
    return iterations;
 
 # check_iterations(h1)
+filenames = ['output1.txt','output2.txt']
+for filename in filenames:
+   if (os.path.exists(filename)):
+      os.remove(filename)
+
 output1_iterations = 0
 output2_iterations = 0
 n = 50;
