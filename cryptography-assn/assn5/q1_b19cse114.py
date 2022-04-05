@@ -6,8 +6,8 @@ def find_hash(text):
    new_hash.update(bytes(text,'utf-8'))
    return new_hash.hexdigest()
 
-def condition(text1,text2):
-   return (text1[:2] == text2[:2])
+def condition(text1,text2,first_bits=4):
+   return (text1[:first_bits] == text2[:first_bits])
 
 def generate_random(num):
    text = list('abcdefghijklmnopqrstuvwxyz0123456789.')
@@ -28,30 +28,7 @@ def generate_pairs(size1,size2):
 h1 = find_hash('sharma.59@iitj.ac.in')
 print(h1)
 
-def check_iterations(h1):
-   t1 = time.perf_counter();
-
-   l = []
-   iterations = int(1e6)
-   for i in range(iterations):
-      generated_value = generate_random(9) + '@iitj.ac.in'
-      h2 = find_hash(generated_value)
-      if (condition(h1,h2)):
-         l.append(generated_value)
-
-   # print(len(l))
-
-   # print(l)
-   if (len(l) > 0):
-      write_to_file('output.txt',iterations,l)
-   else:
-      print('len = 0')
-
-   t2 = time.perf_counter()
-
-   print(f'completed in {(t2-t1)/60:.2f} Mins')
-
-def n_calls(h1):
+def n_calls(h1,match_value):
    t1 = time.perf_counter();
 
    l = []
@@ -61,15 +38,12 @@ def n_calls(h1):
       generated_value = generate_random(9) + '@iitj.ac.in'
       h2 = find_hash(generated_value)
       iterations += 1
-      if (condition(h1,h2)):
+      if (condition(h1,h2,match_value)):
          l.append(generated_value)
          break;
       if (iterations > max_iterations):
          break;
 
-   # print(len(l))
-
-   # print(l)
    if (len(l) > 0):
       write_to_file('output1.txt',iterations,l)
    else:
@@ -80,20 +54,22 @@ def n_calls(h1):
    print(f'completed in {(t2-t1)/60:.2f} Mins')
    return iterations;
 
-def check_pairs():
+def find_pairs(values_match):
    t1 = time.perf_counter();
 
    l = []
    iterations = 0
    max_iterations = int(1e6)
+   values_map = {}
    while (True):
-      generated_value1,generated_value2 = generate_pairs(9,10)
+      generated_value1 = generate_random(9) + "@iitj.ac.in"
       h1 = find_hash(generated_value1)
-      h2 = find_hash(generated_value2)
       iterations += 1
-      if (condition(h1,h2)):
-         l.append((generated_value1,generated_value2))
+      if (h1[:values_match] in values_map):
+         l.append((values_map[h1[:values_match]],generated_value1))
          break;
+      else:
+         values_map[h1[:values_match]] = generated_value1;
       if (iterations > max_iterations):
          break;
 
@@ -118,13 +94,72 @@ for filename in filenames:
 
 output1_iterations = 0
 output2_iterations = 0
-n = 50;
+n = 10;
 for i in range(n):
-   output1_iterations += n_calls(h1) / n
-   output2_iterations += check_pairs() / n
+   output1_iterations += n_calls(h1,2) / n
+   output2_iterations += find_pairs(2) / n
 
 with open('output1.txt','a') as f:
    f.write(str(int(output1_iterations)))
 
 with open('output2.txt','a') as f:
    f.write(str(int(output2_iterations)))
+
+
+
+
+exit(0)
+
+
+def check_iterations(h1):
+   t1 = time.perf_counter();
+
+   l = []
+   iterations = int(1e6)
+   for i in range(iterations):
+      generated_value = generate_random(9) + '@iitj.ac.in'
+      h2 = find_hash(generated_value)
+      if (condition(h1,h2)):
+         l.append(generated_value)
+
+   # print(len(l))
+
+   # print(l)
+   if (len(l) > 0):
+      write_to_file('output.txt',iterations,l)
+   else:
+      print('len = 0')
+
+   t2 = time.perf_counter()
+
+   print(f'completed in {(t2-t1)/60:.2f} Mins')
+
+def check_pairs():
+   t1 = time.perf_counter();
+
+   l = []
+   iterations = 0
+   max_iterations = int(1e6)
+   while (True):
+      generated_value1,generated_value2 = generate_pairs(9,10)
+      h1 = find_hash(generated_value1)
+      h2 = find_hash(generated_value2)
+      iterations += 1
+      if (condition(h1,h2)):
+         l.append((generated_value1,generated_value2))
+         break;
+      if (iterations > max_iterations):
+         break;
+
+   # print(len(l))
+
+   # print(l)
+   if (len(l) > 0):
+      write_to_file('output3.txt',iterations,l)
+   else:
+      print('len = 0')
+
+   t2 = time.perf_counter()
+
+   print(f'completed in {(t2-t1)/60:.2f} Mins')
+   return iterations;

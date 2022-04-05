@@ -1,201 +1,41 @@
-iterations: 212 ----------
+iterations: 27 ----------
 len: 1
-1rjyodt2f@iitj.ac.in
-
-iterations: 63 ----------
-len: 1
-eqt32.zdm@iitj.ac.in
-
-iterations: 194 ----------
-len: 1
-nohg36qmt@iitj.ac.in
-
-iterations: 35 ----------
-len: 1
-9061dfej4@iitj.ac.in
-
-iterations: 154 ----------
-len: 1
-ih914qmjz@iitj.ac.in
-
-iterations: 148 ----------
-len: 1
-xamf4rohg@iitj.ac.in
-
-iterations: 40 ----------
-len: 1
-pr2eyujf1@iitj.ac.in
-
-iterations: 16 ----------
-len: 1
-y2p0gfeq9@iitj.ac.in
-
-iterations: 53 ----------
-len: 1
-tye6lrzjs@iitj.ac.in
-
-iterations: 224 ----------
-len: 1
-5xa4eydgo@iitj.ac.in
-
-iterations: 257 ----------
-len: 1
-1t7hd6fx3@iitj.ac.in
-
-iterations: 170 ----------
-len: 1
-lw5a3o7t2@iitj.ac.in
-
-iterations: 295 ----------
-len: 1
-z3t51lh.f@iitj.ac.in
-
-iterations: 241 ----------
-len: 1
-0sunpxri6@iitj.ac.in
-
-iterations: 436 ----------
-len: 1
-d.syva17i@iitj.ac.in
-
-iterations: 266 ----------
-len: 1
-gtlkjdesp@iitj.ac.in
-
-iterations: 9 ----------
-len: 1
-en9u5ih17@iitj.ac.in
-
-iterations: 77 ----------
-len: 1
-5bw9qkon6@iitj.ac.in
-
-iterations: 185 ----------
-len: 1
-h2e34y6ps@iitj.ac.in
-
-iterations: 98 ----------
-len: 1
-eg1tav.fz@iitj.ac.in
-
-iterations: 724 ----------
-len: 1
-ta3wdeikl@iitj.ac.in
-
-iterations: 308 ----------
-len: 1
-w5knvlsb4@iitj.ac.in
-
-iterations: 2 ----------
-len: 1
-j57nd1l.t@iitj.ac.in
-
-iterations: 155 ----------
-len: 1
-yschqtg4r@iitj.ac.in
-
-iterations: 484 ----------
-len: 1
-n9xw8.mif@iitj.ac.in
-
-iterations: 184 ----------
-len: 1
-fxo9cvdg2@iitj.ac.in
-
-iterations: 10 ----------
-len: 1
-5au6im7xq@iitj.ac.in
+pnyoutjm6@iitj.ac.in
 
 iterations: 19 ----------
 len: 1
-2mjx4wahy@iitj.ac.in
+yv2rmnzbl@iitj.ac.in
 
-iterations: 21 ----------
+iterations: 131 ----------
 len: 1
-l5iuyg2pd@iitj.ac.in
+qtd4oehzm@iitj.ac.in
 
-iterations: 382 ----------
+iterations: 115 ----------
 len: 1
-4jxqtlguw@iitj.ac.in
+0rhu4seot@iitj.ac.in
 
-iterations: 399 ----------
+iterations: 843 ----------
 len: 1
-ecw8o25q.@iitj.ac.in
+dfb2opujm@iitj.ac.in
 
-iterations: 335 ----------
+iterations: 556 ----------
 len: 1
-.jl9w8to2@iitj.ac.in
+8c49x031q@iitj.ac.in
 
-iterations: 226 ----------
+iterations: 55 ----------
 len: 1
-nczfxit3e@iitj.ac.in
+c1awylu7z@iitj.ac.in
 
-iterations: 321 ----------
+iterations: 290 ----------
 len: 1
-m.a9zjh2k@iitj.ac.in
-
-iterations: 204 ----------
-len: 1
-io496zecn@iitj.ac.in
-
-iterations: 172 ----------
-len: 1
-f8ub9gawz@iitj.ac.in
+ve630l1ub@iitj.ac.in
 
 iterations: 46 ----------
 len: 1
-5q3lc0gu4@iitj.ac.in
+zkgxuv0w.@iitj.ac.in
 
-iterations: 422 ----------
+iterations: 18 ----------
 len: 1
-mo5x.l8hu@iitj.ac.in
+wi6m7t2ds@iitj.ac.in
 
-iterations: 302 ----------
-len: 1
-2wqsjzh5d@iitj.ac.in
-
-iterations: 431 ----------
-len: 1
-3vt7xda8u@iitj.ac.in
-
-iterations: 527 ----------
-len: 1
-6pi48elrk@iitj.ac.in
-
-iterations: 37 ----------
-len: 1
-o4pt0lnjy@iitj.ac.in
-
-iterations: 1098 ----------
-len: 1
-tg5w8fl0o@iitj.ac.in
-
-iterations: 221 ----------
-len: 1
-8f0ncz16.@iitj.ac.in
-
-iterations: 3 ----------
-len: 1
-e1ivkfph7@iitj.ac.in
-
-iterations: 150 ----------
-len: 1
-r7kcbi3.0@iitj.ac.in
-
-iterations: 59 ----------
-len: 1
-d1x2acw.q@iitj.ac.in
-
-iterations: 514 ----------
-len: 1
-tgjaiq85p@iitj.ac.in
-
-iterations: 130 ----------
-len: 1
-jtbo5i6vl@iitj.ac.in
-
-iterations: 7 ----------
-len: 1
-dshl1gaem@iitj.ac.in
-
-221
+210
