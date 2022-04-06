@@ -401,13 +401,205 @@ main(<span class="hljs-keyword">void</span>)
 <li>then run a while loop and simply set the values accordingly in order to toggle led's with some delay</li>
 </ol>
 <h2 id="task-2"><strong>Task-2</strong></h2>
+<p>https://controllerstech.com/pwm-in-stm32/</p>
 <p><strong>part-a</strong></p>
-<p>Hello my name is nirbhay sharma and I study in IIT Jodhpur</p>
+<pre class="hljs"><code><div><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"stm32f4xx.h"</span></span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">delay</span><span class="hljs-params">(<span class="hljs-keyword">int</span> dd)</span></span>{
+	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i&lt;dd;i++){
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;j&lt;<span class="hljs-number">300000</span>;j++){
+			;
+		}
+	}
+}
+
+main(<span class="hljs-keyword">void</span>)
+{
+
+	RCC-&gt;AHB1ENR = <span class="hljs-number">0X40</span>; <span class="hljs-comment">// ENABLING CLOCK FOR PORT G</span>
+	GPIOG-&gt;MODER = <span class="hljs-number">0X4000000</span>;
+	GPIOG-&gt;ODR = (<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">13</span>);
+	<span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) {
+		GPIOG-&gt;ODR = <span class="hljs-number">0X0</span>;
+		<span class="hljs-built_in">delay</span>(<span class="hljs-number">100</span>);
+		GPIOG-&gt;ODR = (<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">13</span>);
+		<span class="hljs-built_in">delay</span>(<span class="hljs-number">100</span>);
+	}
+
+}
+</div></code></pre>
+<p><strong>logic</strong></p>
+<ul>
+<li>the logic is same as above, the difference is that only one led ($PG13$) is glowing here and for that moder is set to $0x4000000$</li>
+</ul>
 <p><strong>part-b</strong></p>
+<pre class="hljs"><code><div><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"stm32f4xx.h"</span></span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">delay</span><span class="hljs-params">(<span class="hljs-keyword">int</span> dd)</span></span>{
+	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i&lt;dd;i++){
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;j&lt;<span class="hljs-number">300000</span>;j++){
+			;
+		}
+	}
+}
+
+main(<span class="hljs-keyword">void</span>)
+{
+
+	RCC-&gt;AHB1ENR = <span class="hljs-number">0X40</span>; <span class="hljs-comment">// ENABLING CLOCK FOR PORT G</span>
+	GPIOG-&gt;MODER = <span class="hljs-number">0X10000000</span>;
+	GPIOG-&gt;ODR = (<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">14</span>);
+	<span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) {
+		GPIOG-&gt;ODR = <span class="hljs-number">0X0</span>;
+		<span class="hljs-built_in">delay</span>(<span class="hljs-number">100</span>);
+		GPIOG-&gt;ODR = (<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">14</span>);
+		<span class="hljs-built_in">delay</span>(<span class="hljs-number">100</span>);
+	}
+
+}
+</div></code></pre>
+<p><strong>logic</strong></p>
+<ul>
+<li>the logic is same as above, the difference is that only one led ($PG13) is glowing here and for that moder is set to $0x10000000$</li>
+</ul>
 <p><strong>part-c</strong></p>
+<pre class="hljs"><code><div><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"stm32f4xx.h"</span></span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">delay</span><span class="hljs-params">(<span class="hljs-keyword">int</span> dd)</span></span>{
+	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i&lt;dd;i++){
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;j&lt;<span class="hljs-number">300000</span>;j++){
+			;
+		}
+	}
+}
+
+main(<span class="hljs-keyword">void</span>)
+{
+
+	RCC-&gt;AHB1ENR = <span class="hljs-number">0X40</span>; <span class="hljs-comment">// ENABLING CLOCK FOR PORT G</span>
+	GPIOG-&gt;MODER = <span class="hljs-number">0X14000000</span>;
+	GPIOG-&gt;ODR = (<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">13</span>);
+	<span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) {
+		GPIOG-&gt;ODR = (<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">14</span>);
+		<span class="hljs-built_in">delay</span>(<span class="hljs-number">100</span>);
+		GPIOG-&gt;ODR = (<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">13</span>);
+		<span class="hljs-built_in">delay</span>(<span class="hljs-number">100</span>);
+	}
+
+}
+</div></code></pre>
+<p><strong>logic</strong></p>
+<ul>
+<li>basic logic is same just the difference is that we are now toggling both led's alternatively.</li>
+</ul>
 <h2 id="task-3"><strong>Task-3</strong></h2>
+<pre class="hljs"><code><div><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"stm32f4xx.h"</span></span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">delay</span><span class="hljs-params">(<span class="hljs-keyword">int</span> dd)</span></span>{
+	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i&lt;dd;i++){
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;j&lt;<span class="hljs-number">300000</span>;j++){
+			;
+		}
+	}
+}
+
+main(<span class="hljs-keyword">void</span>)
+{
+
+	RCC-&gt;AHB1ENR = <span class="hljs-number">0X41</span>; <span class="hljs-comment">// ENABLING CLOCK FOR PORT G &amp; A</span>
+	GPIOG-&gt;MODER = <span class="hljs-number">0X14000000</span>;
+	GPIOA-&gt;MODER = <span class="hljs-number">0x0</span>;
+	
+	<span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) {
+		<span class="hljs-keyword">if</span> (GPIOA-&gt;IDR &amp; <span class="hljs-number">0X01</span>) {
+			GPIOG-&gt;ODR = (<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">13</span>) | (<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">14</span>);
+			<span class="hljs-keyword">while</span> (GPIOA-&gt;IDR &amp; <span class="hljs-number">0X01</span>) {
+				;
+			}
+		}
+		GPIOA-&gt;ODR = <span class="hljs-number">0X0</span>;
+		
+	}
+
+}
+</div></code></pre>
+<p><strong>logic</strong></p>
+<ul>
+<li>for internal led's we need to glow when the push button is pressed and push button is at PA0</li>
+<li>set the RCC-&gt;AHB1ENR as 0x41 to enable clock for port G,A</li>
+<li>set Moder for G as 0x14000000</li>
+<li>set Moder for A as 0x00 for making it in input mode</li>
+<li>inside while loop we are waiting for GPIOA-&gt;IDR to be 1 since it is 1 when we press it.</li>
+<li>and then if it is 1 then light the led and wait till it is pressed</li>
+<li>and then make led off once the butten is not pressed</li>
+</ul>
 <h2 id="task-4"><strong>Task-4</strong></h2>
+<pre class="hljs"><code><div><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"stm32f4xx.h"</span></span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">delay</span><span class="hljs-params">(<span class="hljs-keyword">int</span> dd)</span></span>{
+	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i&lt;dd;i++){
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;j&lt;<span class="hljs-number">300000</span>;j++){
+			;
+		}
+	}
+}
+
+main(<span class="hljs-keyword">void</span>)
+{
+
+	RCC-&gt;AHB1ENR = <span class="hljs-number">0X41</span>; <span class="hljs-comment">// ENABLING CLOCK FOR PORT G &amp; A</span>
+	GPIOG-&gt;MODER = <span class="hljs-number">0X4000000</span>;
+	GPIOA-&gt;MODER = <span class="hljs-number">0x0</span>;
+	
+	<span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) {
+		<span class="hljs-keyword">if</span> (GPIOA-&gt;IDR &amp; <span class="hljs-number">0X01</span>) {
+			GPIOG-&gt;ODR = (<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">13</span>);
+			<span class="hljs-keyword">while</span> (GPIOA-&gt;IDR &amp; <span class="hljs-number">0X01</span>) {
+				;
+			}
+		}
+		GPIOA-&gt;ODR = <span class="hljs-number">0X0</span>;
+		
+	}
+
+}
+
+</div></code></pre>
+<p><strong>logic</strong></p>
+<ul>
+<li>In this logic we are connecting external led at PG13 port and hence logic is to just make that pin high so that 5V voltage is created and light the external led</li>
+</ul>
 <h2 id="task-5"><strong>Task-5</strong></h2>
+<pre class="hljs"><code><div><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">"stm32f4xx.h"</span></span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">delay</span><span class="hljs-params">(<span class="hljs-keyword">int</span> dd)</span></span>{
+	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;i&lt;dd;i++){
+		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>;j&lt;<span class="hljs-number">300000</span>;j++){
+			;
+		}
+	}
+}
+
+main(<span class="hljs-keyword">void</span>)
+{
+
+	RCC-&gt;AHB1ENR = <span class="hljs-number">0X41</span>; <span class="hljs-comment">// ENABLING CLOCK FOR PORT G &amp; A</span>
+	GPIOG-&gt;MODER = <span class="hljs-number">0X4000000</span>;
+	GPIOA-&gt;MODER = <span class="hljs-number">0x0</span>;
+	<span class="hljs-keyword">int</span> againon = <span class="hljs-number">0</span>;
+	<span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) {
+		<span class="hljs-keyword">if</span> (GPIOA-&gt;IDR &amp; <span class="hljs-number">0X01</span>) {
+			againon = <span class="hljs-number">1</span>-againon;
+			<span class="hljs-keyword">if</span> (againon == <span class="hljs-number">1</span>){
+				GPIOG-&gt;ODR = (<span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">13</span>);
+			} <span class="hljs-keyword">else</span> {
+				GPIOG-&gt;ODR = <span class="hljs-number">0x0</span>;
+			}
+			<span class="hljs-keyword">while</span> (GPIOA-&gt;IDR &amp; <span class="hljs-number">0X01</span>);
+		}
+	}
+
+}
+
+</div></code></pre>
+<p><strong>logic</strong></p>
+<ul>
+<li>in this the external led is connected at PG13 only but we are toggling it by pressing button</li>
+</ul>
 <h2 id="task-6"><strong>Task-6</strong></h2>
 <pre class="hljs"><code><div>void setup() {
   // put your setup code here, to run once:
@@ -428,6 +620,10 @@ void loop() {
   }
 }
 </div></code></pre>
+<p><strong>logic</strong></p>
+<ul>
+<li>logic is that read two values from analog A1 and A2 and check if $(a_2 &gt; a_1)$ if it is true then print value read from analog 2</li>
+</ul>
 <hr>
 <style> 
 
@@ -435,12 +631,6 @@ table, th, td {
   border: 0.1px solid black;
   border-collapse: collapse;
 }
-
-
-h1,h2,h3,h4,h5,h6,p,li{
-  font-family:Veranda;
-}
-
 
 </style>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>

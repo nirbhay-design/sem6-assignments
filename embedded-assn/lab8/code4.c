@@ -13,9 +13,7 @@ main(void)
 		ADC1->SQR3 |= 0;
 		ADC1->SR = 0;
 		ADC1->CR2 |= (1<<30);
-		while (!(ADC1->SR & (1<<1))) {
-		
-		}
+		while (!(ADC1->SR & (1<<1)));
 		
 	}
 	
