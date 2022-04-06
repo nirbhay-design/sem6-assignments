@@ -32,6 +32,17 @@
     - terminal theme - aurora  
     - pandoc -V geometry:margin=1cm B19CSE114.md -o B19CSE114.pdf
 
+    - easy way
+    - sudo apt update && sudo apt upgrade
+    - code .
+    - install markdown-pdf (it will install chromium browser)
+    - install chromium browser
+    - sudo apt-get install chromium-browser
+    - check path which chromium-browser
+    - open vscode (file -> preferences -> settings -> pdf)
+    - markdown executatble path -> chromium path
+
+    - [repo](https://github.com/yzane/vscode-markdown-pdf)
 - font
     - Ubuntu
     - Hack
