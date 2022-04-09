@@ -5,7 +5,7 @@ main(void)
     SysTick->LOAD = 16000000-1;
     SysTick->VAL = 0;
     for (int i = 0;i<delay_value;i++) {
-        SysTick->CTRL = 0x07;
+        SysTick->CTRL = 0x05;
         while (! (SysTick->CTRL & 0x10000) );
     }
 }
