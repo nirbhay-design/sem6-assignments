@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>B19CSE114.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h2 id="nirbhay-sharma-b19cse114">Nirbhay Sharma (B19CSE114)</h2>
+<h2 id="cryptography---assignment-5">Cryptography - Assignment-5</h2>
+<hr>
+<h3 id="que-1"><strong>Que-1</strong></h3>
+<p><strong>output considering first 16 bits (4 chars of hash) since $\frac{256}{64} = 4$ so each char can be considered as 4 bits</strong></p>
+<ol>
+<li>$x$ corresponding to emailId(sharma.59@iitj.ac.in) - log(iterations) = $16$</li>
+<li>finding $(x,y)$ - log(iterations) = $9$</li>
+</ol>
+<p><span> <img src="32bit_hash.PNG" width=300> <img src="32bit_hash2.PNG" width=300> </span></p>
+<p>it is clearly visible that finding an $x$ which has 16 bit common with (sharma.59@iitj.ac.in) is hard as compared to finding two values $(x,y)$ such that their first 16 bits are matching as the first case is the case of second pre image matching and second case is the case for collision and it is always easy or less expensive (computationally) to find collisions than to find second pre image, and hence first case took many iterations to find out the answer.</p>
+<p><strong>output considering first 8 bits (2 chars of hash)</strong></p>
+<ol>
+<li>$x$ corresponding to emailId(sharma.59@iitj.ac.in) - log(iterations) = $8$</li>
+<li>finding $(x,y)$ - log(iterations) = $5$</li>
+</ol>
+<p><span> <img src="16bit_hash2.PNG" width=300> <img src="16bit_hash.PNG" width=300> </span></p>
+<p>it is clearly visible that finding an $x$ which has 8 bit common with (sharma.59@iitj.ac.in) is hard as compared to finding two values $(x,y)$ such that their first 8 bits are matching as the first case is the case of second pre image matching and second case is the case for collision and it is always easy or less expensive (computationally) to find collisions than to find second pre image, and hence first case took many iterations to find out the answer.</p>
+<h3 id="que-2"><strong>Que-2</strong></h3>
+<p><strong>output of the code for RSA encryption and decryption</strong></p>
+<p><img src="rsa.PNG" alt="img"></p>
+<h3 id="que-3"><strong>Que-3</strong></h3>
+<ol>
+<li>
+<p>proving that a cyclic group of $n$ elements has $\phi(n)$ generators</p>
+<p>let $C_n$ be a cyclic group of order n</p>
+<p>so $C_n$ can be written as = $C_n = \langle a \rangle$ for some $a \in C_n$</p>
+<p>elemetns of $C_n$ can be written as $\{g^k: g \in C_n,
+0 \leq k &lt; n\}$</p>
+<p>so if we assume that some more generator exists which is $g^k$, from this we can follow that $g^k$ can also generate $C_n$ iff $k \perp n$ i.e $gcd(k,n) = 1$ and from that we can follow that for all k that are coprime to n can be a generator and hence number of such k are $\phi(n)$</p>
+</li>
+</ol>
+<p><strong>output of the code for sophie_germain_prime and diffie_hilmann_exchange</strong></p>
+<ul>
+<li>according to definition sophie germain prime is a prime number $p$ such that $2p+1$ is also a prime (safe prime)</li>
+</ul>
+<p><img src="sgp.PNG" alt="img"></p>
+<ul>
+<li>in the above image the generator is any random element from the group since $Z_{p}^*$ is cyclic and p is prime (sophie germain prime) so every element of group $Z_{p}^*$ is a generator (from the property) and hence any random element from $1 \to p-1$ is a generator</li>
+</ul>
+<p>some more sophie germain primes are shown below -:</p>
+<p><img src="more_sgp.PNG" alt="img"></p>
+<hr>
+<h2 id="codes-for-question-1-2-and-3"><strong>codes for question 1, 2, and 3</strong></h2>
+<p><strong>code-1</strong></p>
+<pre class="hljs"><code><div><span class="hljs-keyword">from</span> Crypto.Hash <span class="hljs-keyword">import</span> SHA256
+<span class="hljs-keyword">import</span> random,time,os
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">find_hash</span><span class="hljs-params">(text)</span>:</span>
+   new_hash = SHA256.new()
+   new_hash.update(bytes(text,<span class="hljs-string">'utf-8'</span>))
+   <span class="hljs-keyword">return</span> new_hash.hexdigest()
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">condition</span><span class="hljs-params">(text1,text2,first_bits=<span class="hljs-number">4</span>)</span>:</span>
+   <span class="hljs-keyword">return</span> (text1[:first_bits] == text2[:first_bits])
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">generate_random</span><span class="hljs-params">(num)</span>:</span>
+   text = list(<span class="hljs-string">'abcdefghijklmnopqrstuvwxyz0123456789.'</span>)
+   random_bits = <span class="hljs-string">''</span>.join(random.sample(text,num))
+   <span class="hljs-keyword">return</span> random_bits
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">write_to_file</span><span class="hljs-params">(filename,iterations,array)</span>:</span>
+   <span class="hljs-keyword">with</span> open(filename,<span class="hljs-string">'a'</span>) <span class="hljs-keyword">as</span> f:
+      string = <span class="hljs-string">f'iterations: <span class="hljs-subst">{iterations}</span> ----------\nlen: <span class="hljs-subst">{len(array)}</span>\n<span class="hljs-subst">{<span class="hljs-string">" "</span>.join(map(<span class="hljs-keyword">lambda</span> x:str(x),array))}</span>\n\n'</span>
+      f.write(string)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">generate_pairs</span><span class="hljs-params">(size1,size2)</span>:</span>
+   p1 = generate_random(size1) + <span class="hljs-string">'@iitj.ac.in'</span>
+   p2 = generate_random(size2) + <span class="hljs-string">"@iitj.ac.in"</span>
+   <span class="hljs-keyword">return</span> p1,p2
+
+
+h1 = find_hash(<span class="hljs-string">'sharma.59@iitj.ac.in'</span>)
+print(h1)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">n_calls</span><span class="hljs-params">(h1,match_value)</span>:</span>
+   t1 = time.perf_counter();
+
+   l = []
+   iterations = <span class="hljs-number">0</span>
+   max_iterations = int(<span class="hljs-number">1e6</span>)
+   <span class="hljs-keyword">while</span> (<span class="hljs-literal">True</span>):
+      generated_value = generate_random(<span class="hljs-number">9</span>) + <span class="hljs-string">'@iitj.ac.in'</span>
+      h2 = find_hash(generated_value)
+      iterations += <span class="hljs-number">1</span>
+      <span class="hljs-keyword">if</span> (condition(h1,h2,match_value)):
+         l.append(generated_value)
+         <span class="hljs-keyword">break</span>;
+      <span class="hljs-keyword">if</span> (iterations &gt; max_iterations):
+         <span class="hljs-keyword">break</span>;
+
+   <span class="hljs-keyword">if</span> (len(l) &gt; <span class="hljs-number">0</span>):
+      write_to_file(<span class="hljs-string">'output1.txt'</span>,iterations,l)
+   <span class="hljs-keyword">else</span>:
+      print(<span class="hljs-string">'len = 0'</span>)
+
+   t2 = time.perf_counter()
+
+   print(<span class="hljs-string">f'completed in <span class="hljs-subst">{(t2-t1)/<span class="hljs-number">60</span>:<span class="hljs-number">.2</span>f}</span> Mins'</span>)
+   <span class="hljs-keyword">return</span> iterations;
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">find_pairs</span><span class="hljs-params">(values_match)</span>:</span>
+   t1 = time.perf_counter();
+
+   l = []
+   iterations = <span class="hljs-number">0</span>
+   max_iterations = int(<span class="hljs-number">1e6</span>)
+   values_map = {}
+   <span class="hljs-keyword">while</span> (<span class="hljs-literal">True</span>):
+      generated_value1 = generate_random(<span class="hljs-number">9</span>) + <span class="hljs-string">"@iitj.ac.in"</span>
+      h1 = find_hash(generated_value1)
+      iterations += <span class="hljs-number">1</span>
+      <span class="hljs-keyword">if</span> (h1[:values_match] <span class="hljs-keyword">in</span> values_map):
+         l.append((values_map[h1[:values_match]],generated_value1))
+         <span class="hljs-keyword">break</span>;
+      <span class="hljs-keyword">else</span>:
+         values_map[h1[:values_match]] = generated_value1;
+      <span class="hljs-keyword">if</span> (iterations &gt; max_iterations):
+         <span class="hljs-keyword">break</span>;
+
+   <span class="hljs-comment"># print(len(l))</span>
+
+   <span class="hljs-comment"># print(l)</span>
+   <span class="hljs-keyword">if</span> (len(l) &gt; <span class="hljs-number">0</span>):
+      write_to_file(<span class="hljs-string">'output2.txt'</span>,iterations,l)
+   <span class="hljs-keyword">else</span>:
+      print(<span class="hljs-string">'len = 0'</span>)
+
+   t2 = time.perf_counter()
+
+   print(<span class="hljs-string">f'completed in <span class="hljs-subst">{(t2-t1)/<span class="hljs-number">60</span>:<span class="hljs-number">.2</span>f}</span> Mins'</span>)
+   <span class="hljs-keyword">return</span> iterations;
+
+<span class="hljs-comment"># check_iterations(h1)</span>
+filenames = [<span class="hljs-string">'output1.txt'</span>,<span class="hljs-string">'output2.txt'</span>]
+<span class="hljs-keyword">for</span> filename <span class="hljs-keyword">in</span> filenames:
+   <span class="hljs-keyword">if</span> (os.path.exists(filename)):
+      os.remove(filename)
+
+output1_iterations = <span class="hljs-number">0</span>
+output2_iterations = <span class="hljs-number">0</span>
+n = <span class="hljs-number">10</span>;
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(n):
+   output1_iterations += n_calls(h1,<span class="hljs-number">4</span>) / n
+   output2_iterations += find_pairs(<span class="hljs-number">4</span>) / n
+
+<span class="hljs-keyword">with</span> open(<span class="hljs-string">'output1.txt'</span>,<span class="hljs-string">'a'</span>) <span class="hljs-keyword">as</span> f:
+   f.write(str(int(output1_iterations)))
+
+<span class="hljs-keyword">with</span> open(<span class="hljs-string">'output2.txt'</span>,<span class="hljs-string">'a'</span>) <span class="hljs-keyword">as</span> f:
+   f.write(str(int(output2_iterations)))
+
+exit(<span class="hljs-number">0</span>)
+</div></code></pre>
+<p><strong>code-2</strong></p>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> random
+<span class="hljs-keyword">import</span> sys
+sys.setrecursionlimit(<span class="hljs-number">1030</span>)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">extended_eucledian</span><span class="hljs-params">(a,b)</span>:</span>
+    <span class="hljs-keyword">if</span> (a%b == <span class="hljs-number">0</span>): <span class="hljs-keyword">return</span> (b,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>)
+    val = [[a,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>],[b,a//b,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>]]
+    <span class="hljs-keyword">while</span> val[<span class="hljs-number">-1</span>][<span class="hljs-number">0</span>] != <span class="hljs-number">1</span>:
+        new_val = []
+        new_val.append(val[<span class="hljs-number">-2</span>][<span class="hljs-number">0</span>] % val[<span class="hljs-number">-1</span>][<span class="hljs-number">0</span>])
+        <span class="hljs-keyword">if</span> (new_val[<span class="hljs-number">0</span>] == <span class="hljs-number">0</span>): <span class="hljs-keyword">return</span> (val[<span class="hljs-number">-1</span>][<span class="hljs-number">0</span>],val[<span class="hljs-number">-1</span>][<span class="hljs-number">-2</span>],val[<span class="hljs-number">-1</span>][<span class="hljs-number">-1</span>])
+        new_val.append(val[<span class="hljs-number">-1</span>][<span class="hljs-number">0</span>] // new_val[<span class="hljs-number">0</span>])
+        new_val.append(val[<span class="hljs-number">-2</span>][<span class="hljs-number">-2</span>] - val[<span class="hljs-number">-1</span>][<span class="hljs-number">1</span>] * val[<span class="hljs-number">-1</span>][<span class="hljs-number">-2</span>])
+        new_val.append(val[<span class="hljs-number">-2</span>][<span class="hljs-number">-1</span>] - val[<span class="hljs-number">-1</span>][<span class="hljs-number">1</span>] * val[<span class="hljs-number">-1</span>][<span class="hljs-number">-1</span>])
+        val.append(new_val)  
+    <span class="hljs-keyword">return</span> (val[<span class="hljs-number">-2</span>][<span class="hljs-number">1</span>],val[<span class="hljs-number">-1</span>][<span class="hljs-number">-2</span>],val[<span class="hljs-number">-1</span>][<span class="hljs-number">-1</span>]);
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">rsa_algorithm</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-comment"># self.p = 10888869450418352160768000001</span>
+        <span class="hljs-comment"># self.q = 265252859812191058636308479999999</span>
+        self.p = self.generate_prime();
+        self.q = self.generate_prime();
+        <span class="hljs-comment"># self.p = 155;</span>
+        <span class="hljs-comment"># self.q = 21711;</span>
+        print(<span class="hljs-string">'P: '</span>,self.p)
+        print(<span class="hljs-string">'Q: '</span>,self.q)
+        self.phi_n = (self.p<span class="hljs-number">-1</span>)*(self.q<span class="hljs-number">-1</span>)
+        self.n = self.p * self.q
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">find_e</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>,<span class="hljs-number">100</span>,<span class="hljs-number">2</span>):
+            gcd,x,y = extended_eucledian(self.phi_n,i)
+            <span class="hljs-keyword">if</span> (gcd == <span class="hljs-number">1</span>):
+                <span class="hljs-keyword">return</span> (i,y)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">rsa_encryption</span><span class="hljs-params">(self,msg)</span>:</span>
+        self.e,self.__d = self.find_e();
+        <span class="hljs-comment"># print('inside d:',self.__d)</span>
+        <span class="hljs-keyword">if</span> (self.__d &lt; <span class="hljs-number">0</span>):
+            print(<span class="hljs-string">'d &lt; 0, making it positive !!!'</span>)
+            self.__d = self.phi_n + self.__d
+        encoded_string = []
+        encoded_msg = bytes(msg,<span class="hljs-string">'utf-8'</span>)
+        <span class="hljs-keyword">for</span> char <span class="hljs-keyword">in</span> encoded_msg:
+            encoded_string.append(self.modulo_exponentiation(char,self.e,self.n))        
+        <span class="hljs-keyword">return</span> <span class="hljs-string">''</span>.join(map(<span class="hljs-keyword">lambda</span> x: bytearray(hex(x),<span class="hljs-string">'utf-8'</span>).decode() + <span class="hljs-string">' '</span> ,encoded_string))[:<span class="hljs-number">-1</span>]
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">rsa_decryption</span><span class="hljs-params">(self,cipher)</span>:</span>
+        decoded_msg = []
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> cipher.split(<span class="hljs-string">' '</span>):
+            cipher_msg = i.strip();
+            cipher_msg = int(cipher_msg.encode(),<span class="hljs-number">16</span>)
+            <span class="hljs-comment"># print(f'cipher msg: {cipher_msg}')</span>
+            decoded_msg.append(self.modulo_exponentiation(cipher_msg,self.__d,self.n))
+        <span class="hljs-comment"># print(decoded_msg)</span>
+        <span class="hljs-comment"># return </span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">''</span>.join(map(<span class="hljs-keyword">lambda</span> x:chr(x),decoded_msg))
+
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">square_multiply</span><span class="hljs-params">(self,bas,exp)</span>:</span>
+        <span class="hljs-keyword">if</span> (exp == <span class="hljs-number">0</span>): <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">if</span> (exp == <span class="hljs-number">1</span>): <span class="hljs-keyword">return</span> bas;
+        <span class="hljs-keyword">if</span> (exp &amp; <span class="hljs-number">1</span>):
+            <span class="hljs-keyword">return</span> bas * self.square_multiply(bas * bas, (exp<span class="hljs-number">-1</span>)//<span class="hljs-number">2</span>)
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> self.square_multiply(bas * bas,exp//<span class="hljs-number">2</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">modulo_exponentiation</span><span class="hljs-params">(self,bas,exp,N)</span>:</span>
+        <span class="hljs-keyword">if</span> (exp == <span class="hljs-number">0</span>):
+            <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">if</span> (exp == <span class="hljs-number">1</span>):
+            <span class="hljs-keyword">return</span> bas % N;
+        t = self.modulo_exponentiation(bas, exp // <span class="hljs-number">2</span>,N);
+        t = (t * t) % N;
+        <span class="hljs-keyword">if</span> (exp % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>):
+            <span class="hljs-keyword">return</span> t;
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> ((bas % N) * t) % N;
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">generate_random_512</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> int(<span class="hljs-string">"1"</span>+ <span class="hljs-string">''</span>.join([random.choice([<span class="hljs-string">"0"</span>,<span class="hljs-string">"1"</span>]) <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(<span class="hljs-number">510</span>)])  + <span class="hljs-string">"1"</span>,<span class="hljs-number">2</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">find_s_t</span><span class="hljs-params">(self,num)</span>:</span>
+        new_num = num - <span class="hljs-number">1</span>;
+        s = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">while</span> (new_num &amp; <span class="hljs-number">1</span> == <span class="hljs-number">0</span>):
+            s += <span class="hljs-number">1</span>;
+            new_num &gt;&gt;= <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">return</span> (s,new_num)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">miller_rabin_test</span><span class="hljs-params">(self,num,s,t)</span>:</span>
+        new_num = num - <span class="hljs-number">1</span>;
+        aa = random.randint(<span class="hljs-number">2</span>,new_num)
+        b_i = self.modulo_exponentiation(aa,t,num);
+        <span class="hljs-keyword">if</span> (b_i == <span class="hljs-number">1</span> <span class="hljs-keyword">or</span> b_i == num - <span class="hljs-number">1</span>):
+            <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+        pow_2 = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">while</span> (<span class="hljs-literal">True</span>):
+            pow_2 += <span class="hljs-number">1</span>
+            <span class="hljs-keyword">if</span> (pow_2 == s+<span class="hljs-number">1</span>):
+                <span class="hljs-keyword">break</span>;
+            b_i = self.modulo_exponentiation(b_i,<span class="hljs-number">2</span>,num);
+            <span class="hljs-comment"># if (b_i == 1): return 0;</span>
+            <span class="hljs-keyword">if</span> (b_i == num - <span class="hljs-number">1</span>): <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_check_prime</span><span class="hljs-params">(self,num)</span>:</span>
+        s,t = self.find_s_t(num);
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">100</span>):
+            vote = self.miller_rabin_test(num,s,t)
+            <span class="hljs-keyword">if</span> (vote == <span class="hljs-number">0</span>):
+                <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>;
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>;
+
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">generate_prime</span><span class="hljs-params">(self)</span>:</span>
+        a = <span class="hljs-literal">False</span>;
+        final_prime = <span class="hljs-literal">None</span>;
+        <span class="hljs-comment"># iterations = 0;</span>
+        <span class="hljs-keyword">while</span> (<span class="hljs-keyword">not</span> a):
+            <span class="hljs-comment"># iterations+=1</span>
+            final_prime = self.generate_random_512()
+            a = self._check_prime(final_prime)
+        <span class="hljs-comment"># print(iterations)</span>
+        <span class="hljs-keyword">return</span> final_prime;
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">fast_modulo_exponentiation</span><span class="hljs-params">(self,base,power,N)</span>:</span>
+        dp = [<span class="hljs-number">-1</span>]
+
+            
+
+        
+
+    
+
+original_text = <span class="hljs-string">"Nirbhay Sharma is a good boy !!! and he studies at IIT Jodhpur and he likes to do exercise and yoga"</span>;
+rsa = rsa_algorithm();
+
+<span class="hljs-comment"># print(rsa.generate_prime())</span>
+<span class="hljs-comment"># print(rsa.generate_prime())</span>
+<span class="hljs-comment"># exit(0)</span>
+
+enc = rsa.rsa_encryption(original_text);
+
+print(<span class="hljs-string">'private d:'</span>,rsa._rsa_algorithm__d)
+print(<span class="hljs-string">'public n: '</span>,rsa.n)
+print(<span class="hljs-string">'public e:'</span>,rsa.e)
+
+print(<span class="hljs-string">'#'</span>*<span class="hljs-number">25</span> + <span class="hljs-string">' original_text '</span> + <span class="hljs-string">'#'</span>*<span class="hljs-number">25</span>)
+print(original_text)
+
+print(<span class="hljs-string">'#'</span>*<span class="hljs-number">25</span> + <span class="hljs-string">' encrypted text '</span> + <span class="hljs-string">'#'</span>*<span class="hljs-number">25</span>)
+print(enc)
+
+dec = rsa.rsa_decryption(enc)
+print(<span class="hljs-string">'#'</span>*<span class="hljs-number">25</span> + <span class="hljs-string">' decrypted text '</span> + <span class="hljs-string">'#'</span>*<span class="hljs-number">25</span>)
+print(dec)
+</div></code></pre>
+<p><strong>code-3</strong></p>
+<pre class="hljs"><code><div><span class="hljs-keyword">import</span> random, json, os
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">modulo_exponentiation</span><span class="hljs-params">(bas,exp,N)</span>:</span>
+    <span class="hljs-keyword">if</span> (exp == <span class="hljs-number">0</span>):
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">if</span> (exp == <span class="hljs-number">1</span>):
+        <span class="hljs-keyword">return</span> bas % N;
+    t = modulo_exponentiation(bas, exp // <span class="hljs-number">2</span>,N);
+    t = (t * t) % N;
+    <span class="hljs-keyword">if</span> (exp % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>):
+        <span class="hljs-keyword">return</span> t;
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> ((bas % N) * t) % N;
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">square_multiply</span><span class="hljs-params">(bas,exp)</span>:</span>
+    <span class="hljs-keyword">if</span> (exp == <span class="hljs-number">0</span>): <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">if</span> (exp == <span class="hljs-number">1</span>): <span class="hljs-keyword">return</span> bas;
+    <span class="hljs-keyword">if</span> (exp &amp; <span class="hljs-number">1</span>):
+        <span class="hljs-keyword">return</span> bas * square_multiply(bas * bas, (exp<span class="hljs-number">-1</span>)//<span class="hljs-number">2</span>)
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">return</span> square_multiply(bas * bas,exp//<span class="hljs-number">2</span>)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">write_to_file</span><span class="hljs-params">(filename,dictionary)</span>:</span>
+    <span class="hljs-keyword">with</span> open(filename, <span class="hljs-string">'a'</span>) <span class="hljs-keyword">as</span> f:
+        f.write(str(dictionary) + <span class="hljs-string">"\n"</span>)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">find_generator</span><span class="hljs-params">(prime_p)</span>:</span>
+    <span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
+        random_a = random.randint(<span class="hljs-number">2</span>,prime_p<span class="hljs-number">-1</span>)
+        rem = modulo_exponentiation(random_a,prime_p<span class="hljs-number">-1</span>,prime_p)
+        <span class="hljs-keyword">if</span> (rem == <span class="hljs-number">1</span>): <span class="hljs-keyword">return</span> random_a;
+
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Prime_generator_machine</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,bits_in_prime)</span>:</span>
+        self.bip = bits_in_prime;
+    
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">modulo_exponentiation</span><span class="hljs-params">(self,bas,exp,N)</span>:</span>
+        <span class="hljs-keyword">if</span> (exp == <span class="hljs-number">0</span>):
+            <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">if</span> (exp == <span class="hljs-number">1</span>):
+            <span class="hljs-keyword">return</span> bas % N;
+        t = self.modulo_exponentiation(bas, exp // <span class="hljs-number">2</span>,N);
+        t = (t * t) % N;
+        <span class="hljs-keyword">if</span> (exp % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>):
+            <span class="hljs-keyword">return</span> t;
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">return</span> ((bas % N) * t) % N;
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">generate_random_bits</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> int(<span class="hljs-string">"1"</span>+ <span class="hljs-string">''</span>.join([random.choice([<span class="hljs-string">"0"</span>,<span class="hljs-string">"1"</span>]) <span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(self.bip<span class="hljs-number">-2</span>)])  + <span class="hljs-string">"1"</span>,<span class="hljs-number">2</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">find_s_t</span><span class="hljs-params">(self,num)</span>:</span>
+        new_num = num - <span class="hljs-number">1</span>;
+        s = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">while</span> (new_num &amp; <span class="hljs-number">1</span> == <span class="hljs-number">0</span>):
+            s += <span class="hljs-number">1</span>;
+            new_num &gt;&gt;= <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">return</span> (s,new_num)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">miller_rabin_test</span><span class="hljs-params">(self,num,s,t)</span>:</span>
+        new_num = num - <span class="hljs-number">1</span>;
+        aa = random.randint(<span class="hljs-number">2</span>,new_num)
+        b_i = self.modulo_exponentiation(aa,t,num);
+        <span class="hljs-keyword">if</span> (b_i == <span class="hljs-number">1</span> <span class="hljs-keyword">or</span> b_i == num - <span class="hljs-number">1</span>):
+            <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+        pow_2 = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">while</span> (<span class="hljs-literal">True</span>):
+            pow_2 += <span class="hljs-number">1</span>
+            <span class="hljs-keyword">if</span> (pow_2 == s+<span class="hljs-number">1</span>):
+                <span class="hljs-keyword">break</span>;
+            b_i = self.modulo_exponentiation(b_i,<span class="hljs-number">2</span>,num);
+            <span class="hljs-comment"># if (b_i == 1): return 0;</span>
+            <span class="hljs-keyword">if</span> (b_i == num - <span class="hljs-number">1</span>): <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_check_prime</span><span class="hljs-params">(self,num)</span>:</span>
+        s,t = self.find_s_t(num);
+        <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">100</span>):
+            vote = self.miller_rabin_test(num,s,t)
+            <span class="hljs-keyword">if</span> (vote == <span class="hljs-number">0</span>):
+                <span class="hljs-keyword">return</span> <span class="hljs-literal">False</span>;
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">True</span>;
+
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">generate_prime</span><span class="hljs-params">(self)</span>:</span>
+        a = <span class="hljs-literal">False</span>;
+        final_prime = <span class="hljs-literal">None</span>;
+        <span class="hljs-comment"># iterations = 0;</span>
+        <span class="hljs-keyword">while</span> (<span class="hljs-keyword">not</span> a):
+            <span class="hljs-comment"># iterations+=1</span>
+            final_prime = self.generate_random_bits()
+            a = self._check_prime(final_prime)
+        <span class="hljs-comment"># print(iterations)</span>
+        <span class="hljs-keyword">return</span> final_prime;
+
+
+pgm = Prime_generator_machine(<span class="hljs-number">512</span>)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">generate_sophie_germain_prime</span><span class="hljs-params">(pgm,thresh)</span>:</span>
+    sgp = <span class="hljs-literal">None</span>;
+    iterations = <span class="hljs-number">0</span>;
+    p_dash = <span class="hljs-number">0</span>
+    <span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:
+        p_dash = pgm.generate_prime()
+
+        <span class="hljs-comment"># print(f'p_dash prime_test: {pgm._check_prime(p_dash)}')</span>
+        iterations += <span class="hljs-number">1</span>
+        print(<span class="hljs-string">f'iterations: <span class="hljs-subst">{iterations}</span>'</span>,end=<span class="hljs-string">'\r'</span>)
+        sophie_germain_prime = <span class="hljs-number">2</span>*p_dash + <span class="hljs-number">1</span>
+        <span class="hljs-keyword">if</span> (pgm._check_prime(sophie_germain_prime)):
+            sgp = sophie_germain_prime
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">if</span> (iterations == thresh): 
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-comment"># print(f'sophie germain prime test: {pgm._check_prime(sophie_germain_prime)}')</span>
+
+        <span class="hljs-comment"># print('p_dash:',p_dash)</span>
+        <span class="hljs-comment"># print('generated sophie germain prime:',sophie_germain_prime)</span>
+    <span class="hljs-comment"># print('p_dash:',p_dash)</span>
+    <span class="hljs-keyword">return</span> ((p_dash,sgp,iterations) <span class="hljs-keyword">if</span> sgp <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> <span class="hljs-literal">None</span> <span class="hljs-keyword">else</span> (<span class="hljs-string">"None"</span>,<span class="hljs-string">"None"</span>,iterations));
+
+
+
+thresh = <span class="hljs-number">1000</span>
+sophie_germain_prime,condition_sophie_germain,iterations = generate_sophie_germain_prime(pgm,thresh)
+<span class="hljs-keyword">if</span> condition_sophie_germain == <span class="hljs-string">"None"</span>:
+    print(<span class="hljs-string">f'cannot find sophie germain prime till <span class="hljs-subst">{thresh}</span> iterations !!! Try running again'</span>)
+    exit(<span class="hljs-number">0</span>)
+print(<span class="hljs-string">'sphie_germain_prime: '</span>,sophie_germain_prime)
+generator = find_generator(sophie_germain_prime)
+write_to_file(<span class="hljs-string">'sophie-germain-prime.txt'</span>,{<span class="hljs-string">"iter"</span>:iterations,<span class="hljs-string">"sgp"</span>:sophie_germain_prime,<span class="hljs-string">"2p+1"</span>:condition_sophie_germain,<span class="hljs-string">"generator"</span>:generator})
+<span class="hljs-comment"># for a prime order group every element is a generator</span>
+print(<span class="hljs-string">'found generator: '</span>,generator)
+
+<span class="hljs-comment"># exit(0)</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Alice</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,g)</span>:</span>
+        self.a = random.randint(<span class="hljs-number">3</span>,<span class="hljs-number">10</span>)
+        self.g = g
+    
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_generate_key</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> square_multiply(self.g,self.a)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_generate_final_key</span><span class="hljs-params">(self,bob_g_random)</span>:</span>
+        <span class="hljs-keyword">return</span> square_multiply(bob_g_random,self.a)
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bob</span><span class="hljs-params">(object)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self,g)</span>:</span>
+        self.b = random.randint(<span class="hljs-number">3</span>,<span class="hljs-number">10</span>)
+        self.g = g
+    
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_generate_key</span><span class="hljs-params">(self)</span>:</span>
+        <span class="hljs-keyword">return</span> square_multiply(self.g,self.b)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_generate_final_key</span><span class="hljs-params">(self,alice_g_random)</span>:</span>
+        <span class="hljs-keyword">return</span> square_multiply(alice_g_random,self.b)
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">diffie_hilmann_exchange</span><span class="hljs-params">(g)</span>:</span>
+    alice = Alice(g)
+    bob = Bob(g)
+
+    alice_generated_key = alice._generate_key()
+    bob_generated_key = bob._generate_key()
+
+    final_key_at_alice = alice._generate_final_key(bob_generated_key)
+    final_key_at_bob = bob._generate_final_key(alice_generated_key)
+
+    print(<span class="hljs-string">"key_at_alice end:"</span>,final_key_at_alice)
+    print(<span class="hljs-string">'key_at_bob end:'</span>,final_key_at_bob)
+    <span class="hljs-comment"># print(final_key_at_alice==final_key_at_bob)</span>
+    
+
+diffie_hilmann_exchange(<span class="hljs-number">23</span>)
+
+</div></code></pre>
+<hr>
+<style> 
+
+table, th, td {
+  border: 0.1px solid black;
+  border-collapse: collapse;
+}
+
+</style>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });
+</script>
+
+</body>
+</html>

@@ -96,17 +96,14 @@ output1_iterations = 0
 output2_iterations = 0
 n = 10;
 for i in range(n):
-   output1_iterations += n_calls(h1,2) / n
-   output2_iterations += find_pairs(2) / n
+   output1_iterations += n_calls(h1,4) / n
+   output2_iterations += find_pairs(4) / n
 
 with open('output1.txt','a') as f:
    f.write(str(int(output1_iterations)))
 
 with open('output2.txt','a') as f:
    f.write(str(int(output2_iterations)))
-
-
-
 
 exit(0)
 
