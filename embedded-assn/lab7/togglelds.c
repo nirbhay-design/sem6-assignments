@@ -18,9 +18,15 @@ main(void)
 	TIM1->CCMR1 = 0X68;
 	TIM1->CR1 |= (1 << 7);
 	TIM1->BDTR = (1 << 15);
-	TIM1->CCER = (1 << 10);
+	TIM1->CCER = (1 << 2);
 	
-	TIM1->CCR1 = 500;
-	TIM1->CR1 |= 0X01; 
+	TIM1->CR1 |= 0X01;
+
+    int tim_values_terms = 7; 
+    int tim_values[] = {200, 300, 500, 400, 900, 800, 600};
+    
+    for (int i = 0;i<tim_values_terms;i++){
+	    TIM1->CCR1 = tim_values[i];
+    } 
 
 }
