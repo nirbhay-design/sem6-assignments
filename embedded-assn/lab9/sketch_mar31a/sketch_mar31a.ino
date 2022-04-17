@@ -1,18 +1,65 @@
-void setup() {
-  // put your setup code here, to run once:
-  
-  Serial.begin(9600);
+#include <Arduino_FreeRTOS.h>
+#include <semphr.h>
+SemaphoreHandle_t interruptSemaphore;
+
+void setup() 
+{
+  Serial.begin(9600); // Enable serial communication library.
+  pinMode(LED_BUILTIN, OUTPUT);
+
+ // Create task for Arduino led 
+  xTaskCreate(TaskLedon, // Task function
+              "Ledon", // Task name
+              128, // Stack size 
+              NULL, 
+              0 ,// Priority
+              NULL );
+   xTaskCreate(TaskLedoff, // Task function
+              "Ledoff", // Task name
+              128, // Stack size 
+              NULL, 
+              0, // Priority
+              NULL );
+  interruptSemaphore = xSemaphoreCreateBinary();
+  if (interruptSemaphore != NULL) 
+  {
+    attachInterrupt(digitalPinToInterrupt(2), interruptHandler, HIGH);
+  }  
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-  int aread1 = analogRead(A1);
-  delay(1);
-  int aread2 = analogRead(A2);
+void loop() {}
 
-  if (aread2 > aread1){
-    Serial.println(aread2);
-  } else {
-    Serial.println("printing Nothing");
+void interruptHandler() 
+{ 
+  Serial.println("Semaphore is given");
+  BaseType_t  xHigherPriorityTaskWoken  pdFALSE;
+  xSemaphoreGiveFromISR(interruptSemaphore, &xHigherPriorityTaskWoken);
+}
+
+void TaskLedon(void *pvParameters)
+{
+  (void) pvParameters;
+
+  for (;;) 
+    {
+    if (xSemaphoreTake(interruptSemaphore, portMAX_DELAY) == pdPASS) 
+    {
+      Serial.println("TaskLedon Received Semaphore");
+      digitalWrite(LED_BUILTIN, HIGH);
+    }
+    }
+  }
+
+void TaskLedoff(void *pvParameters)
+{
+  (void) pvParameters;
+  for (;;) 
+    {
+    if (xSemaphoreTake(interruptSemaphore, portMAX_DELAY) == pdPASS)
+    {
+      Serial.println("TaskLedoff Received Semaphore");
+      digitalWrite(LED_BUILTIN, LOW);
+    }
+    
   }
 }

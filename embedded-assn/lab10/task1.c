@@ -13,14 +13,15 @@ main(void)
 
 	// configuring timer
 	TIM1->CR1 = 0X01;
-	TIM1->PSC = 15;
+	TIM1->PSC = 79;
 	TIM1->ARR = 999;
 	TIM1->CCMR1 = 0X68;
 	TIM1->CR1 |= (1 << 7);
 	TIM1->BDTR = (1 << 15);
 	TIM1->CCER = (1 << 2);
 	
-	TIM1->CCR1 = 500;
 	TIM1->CR1 |= 0X01; 
-
+	while(1){
+		TIM1->CCR1 = 500;
+	}
 }

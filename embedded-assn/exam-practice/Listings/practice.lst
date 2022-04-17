@@ -1,0 +1,122 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 area             mydata, DATA, readonly
+    2 00000000 31 30 31 
+              31 30 31 
+              00       string  DCB              "101101",0
+    3 00000007 00 00000005 
+                       lenstr  DCD              5
+    4 0000000C         
+    5 0000000C                 area             mycode, CODE, READONLY
+    6 00000000                 export           __main
+    7 00000000         
+    8 00000000         __main  PROC
+    9 00000000         
+   10 00000000 480B            ldr              r0, =string
+   11 00000002 490C            LDR              r1, =lenstr
+   12 00000004 6809            ldr              r1, [r1]
+   13 00000006         
+   14 00000006 F04F 0200       mov              r2, #0      ; index
+   15 0000000A 460B            mov              r3, r1      ; pow_of_2
+   16 0000000C F04F 0500       mov              r5, #0      ; final ans
+   17 00000010         
+   18 00000010 428A    loop    cmp              r2, r1
+   19 00000012 DC0C            bgt              stop
+   20 00000014         
+   21 00000014 5C84            ldrb             r4, [r0, r2]
+   22 00000016 F2A4 0430       add              r4, r4, #-48
+   23 0000001A         
+   24 0000001A 2C01            cmp              r4, #1
+   25 0000001C FA04 F403       lsl              r4, r4, r3
+   26 00000020 BF08 192D       addeq            r5, r5,r4
+   27 00000024 F103 33FF       add              r3, r3, #-1
+   28 00000028 F102 0201       add              r2 ,r2, #1
+   29 0000002C E7F0            b                loop
+   30 0000002E                 endp
+   31 0000002E E7FE    stop    B                stop
+   32 00000030                 end
+              00000000 
+              00000000 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
+erwork --depend=.\objects\practice.d -o.\objects\practice.o -I.\RTE\_Target_1 -
+I"C:\Users\Nirbhay sharma\AppData\Local\Arm\Packs\ARM\CMSIS\5.5.1\CMSIS\Core\In
+clude" -I"C:\Users\Nirbhay sharma\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.
+14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include" --predefine="__EVAL SETA 1" --p
+redefine="__UVISION_VERSION SETA 528" --predefine="_RTE_ SETA 1" --predefine="S
+TM32F407xx SETA 1" --list=.\listings\practice.lst practice.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+lenstr 00000008
+
+Symbol: lenstr
+   Definitions
+      At line 3 in file practice.s
+   Uses
+      At line 11 in file practice.s
+Comment: lenstr used once
+mydata 00000000
+
+Symbol: mydata
+   Definitions
+      At line 1 in file practice.s
+   Uses
+      None
+Comment: mydata unused
+string 00000000
+
+Symbol: string
+   Definitions
+      At line 2 in file practice.s
+   Uses
+      At line 10 in file practice.s
+Comment: string used once
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+__main 00000000
+
+Symbol: __main
+   Definitions
+      At line 8 in file practice.s
+   Uses
+      At line 6 in file practice.s
+Comment: __main used once
+loop 00000010
+
+Symbol: loop
+   Definitions
+      At line 18 in file practice.s
+   Uses
+      At line 29 in file practice.s
+Comment: loop used once
+mycode 00000000
+
+Symbol: mycode
+   Definitions
+      At line 5 in file practice.s
+   Uses
+      None
+Comment: mycode unused
+stop 0000002E
+
+Symbol: stop
+   Definitions
+      At line 31 in file practice.s
+   Uses
+      At line 19 in file practice.s
+      At line 31 in file practice.s
+
+4 symbols
+344 symbols in table
