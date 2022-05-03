@@ -28,7 +28,7 @@ def find_instia_buysnetworkservicefrom():
 
 reg = r'(103\.21\.12[4-7]\.\b(25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9][0-9]|[0-9])\b/24)'
 
-lines = return_file('bgp-routing-table.txt')
+lines = return_file('../bgp-routing-table.txt')
 
 t1 = time.perf_counter()
 
@@ -80,20 +80,21 @@ top10as = sorted(list(map(lambda x: (x[0],len(top_10_ases[x[0]])),top_10_ases.it
 
 # top10_values = list(map(lambda x: (x[0],x[1]),top10as))
 
-from_isp = find_instia_buysnetworkservicefrom()
 
 
 print(f'unique prefix: {len(set_pref)}')
 print(f'unique as: {len(set_as)}')
 print(f'entries in set A: {len(set_a)}')
-print(f'entries insti-A buys network service from: {len(from_isp)}')
 
 
 write_to_file('unique_prefix.txt',set_pref)
 write_to_file('unique_as.txt',set_as)
 write_to_file('a.txt',set_a)
-write_to_file('whois_a.txt',from_isp)
 write_to_file('top_10_ases.txt',top10as)
+
+from_isp = find_instia_buysnetworkservicefrom()
+print(f'entries insti-A buys network service from: {len(from_isp)}')
+write_to_file('whois_a.txt',from_isp)
 
 t2 = time.perf_counter()
 

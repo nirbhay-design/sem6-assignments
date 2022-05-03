@@ -1,0 +1,19 @@
+loading data normally
+loading resnet
+/DATA/sharma59/.local/lib/python3.7/site-packages/torch/nn/functional.py:718: UserWarning: Named tensors and all their associated APIs are an experimental feature and subject to change. Please do not use them for anything important until they are released as stable. (Triggered internally at  /pytorch/c10/core/TensorImpl.h:1156.)
+  return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+epoch:[1/10], TrainAcc:0.942, TrainLoss:0.302, ValAcc:0.998, ValLoss:0.009
+epoch:[2/10], TrainAcc:0.990, TrainLoss:0.028, ValAcc:0.944, ValLoss:0.155
+epoch:[3/10], TrainAcc:0.987, TrainLoss:0.049, ValAcc:0.911, ValLoss:0.349
+epoch:[4/10], TrainAcc:0.987, TrainLoss:0.034, ValAcc:0.996, ValLoss:0.023
+epoch:[5/10], TrainAcc:0.993, TrainLoss:0.018, ValAcc:0.971, ValLoss:0.054
+epoch:[6/10], TrainAcc:0.985, TrainLoss:0.037, ValAcc:0.926, ValLoss:0.160
+epoch:[7/10], TrainAcc:0.982, TrainLoss:0.050, ValAcc:0.984, ValLoss:0.041
+epoch:[8/10], TrainAcc:0.994, TrainLoss:0.017, ValAcc:0.993, ValLoss:0.025
+epoch:[9/10], TrainAcc:0.995, TrainLoss:0.016, ValAcc:0.991, ValLoss:0.018
+epoch:[10/10], TrainAcc:0.999, TrainLoss:0.003, ValAcc:1.000, ValLoss:0.001
+done time 51 Mins 52 Sec
+/DATA/sharma59/dl-assignment/Dlops_assignment/scripts/tb_gpu.py:115: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  predict_prob = F.softmax(scores)
+correct are 1.00
+test_accuracy tensor(0.9988)
