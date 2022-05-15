@@ -13,7 +13,7 @@
 
 Format preserving encryption is an encryption scheme in which the ciphertext is in the same format as the plaintext. It's applications are found in credit cards numbers and encrypting social security number. Techniques such as cycle walking can be used for transfroming blocks ciphers into format preserving ciphers. This method is inefficient when there is a significant size difference between domain size and target size. To tackle this problem self-domain tweakable Feistel ciphers were introduced. **FF1** and **FF3-1** (NIST) and **FEA-1** and **FEA-2** (South Korean standards ) are examples of such schemes.
 
-Linear cryptanalysis is a form a cryptanalysis based on finding affine approximations to the action of a cipher. Many attacks have been proposed on the format preserving encryptions. The paper "Linear Cryptanalysis of FF3-1 and FEA" develops linear cryptanlysis based new distingushing and message-recovery attacks on small domain Feistel ciphers. 
+Linear cryptanalysis is a form a cryptanalysis based on finding affine approximations to the action of a cipher. Many attacks have been proposed on the format preserving encryptions. The paper "Linear Cryptanalysis of FF3-1 and FEA" develops linear cryptanlysis based new distingushing and message-recovery attacks on small domain Feistel ciphers. The paper dicusses Linear distinguishers and $\chi^2$ distinguishers for FEA-1, FEA-2 and FF3-1. The paper then talks about recovery of left part and right part of plaintext for the encryption scheme.
 
 ### **Linear Cryptanalysis**
 As we are aware of the two attacks that can be applied on symmetric-key block ciphers, that are linear and differential cryptanalysis, in this part we are only talking about linear cryptanalysis with SPN (Substitution Permutation Network) as one usecase.
@@ -59,41 +59,15 @@ notice that we have two sequences here $\alpha_1 \alpha_2 \alpha_3 \alpha_4$, $\
 
 In this manner linear cryptanalysis tries to find the linear relations among the bits of input and output and higher probability expressions are exploited to further crack some of the key bits etc.
 
-### **Format Preserving encryption Schemes**
+### **Format Preserving Encryption (FPE) Schemes**
 
-Encryption schemes where input and output have the same format are known as Format preserving encryptions. General techniques of FPE are :
+![img](author1.PNG)
 
-1. **Prefix Cipher**: 
+These are the encryption schemes where input and output have the same format for example the number is encrypted to the number itself, credit card is encrypted to another credit card number.Some of the constructions of the FPE technique are 
 
-    For a domain d={0,1...t-1}
+**Need of tweaks**
 
-    We have a n-bit block cipher $E_{k}(.)$ with domain $N= 2^{n}\  \ge \ t$
-
-    Permuted \[0,1,...t-1\] = Ordering \[$E_{k}(0)$,$E_{k}(1)$,....$E_{k}(t-1)$\]
-
-    This method computably reasonable for t<$2^{30}$
-
-2. **Cycle walking** 
-
-    Domain d={0,1.....t-1}
-
-    Take a $E_{k}(.)$ with domain N such that $N\ge t$
-
-    The Map $x \in d$ to $E_{k}(...E_{k}(..E_{k}(x)) = c$ such that $c \in d$ 
-
-    Problem: Too many block cipher invocations if d is not dense in block cipher domain N
-
-3. **Generalised Feistel**
-
-    If we have a message size of t 
-
-    We choose two integers a and b such that $a,b \ge t$ with $a \ge L$ and $b \ge R$ and perform
-
-    ![img](https://github.com/Mayank9mare/ImagesForMarkdown/blob/main/cry1.png?raw=true)
-
-    Minimum 3 rounds should be done 
-
-
+- Since the format preserving encryption schemes maps a number to another number (preserve format) and so for the usecase of credit cards the 8-10 length character is mapped to another 8-10 length number and so the encryption values are limited in this case only ($10^8$) and so the tweaks comes to rescue, the tweaks in the fiestel structure ensures the variety of the encrypted ciphertext.
 
 **Construction FFX (FF1,FF2,FF3)**
 
@@ -109,16 +83,16 @@ a unique round counter as the input; the details are not important for this work
 as these functions will be modelled as uniform random. The tweaks TL and TR
 are bitstrings of length 28.
 
-![img](https://github.com/Mayank9mare/ImagesForMarkdown/blob/main/cry2.png?raw=true)
+<!-- ![img](https://github.com/Mayank9mare/ImagesForMarkdown/blob/main/cry2.png?raw=true) -->
 
-Structure of two round FF3-1
+<!-- Structure of two round FF3-1 -->
 
 
 **Structural details of FEA-X**
 
-2 rounds of tweakable feistel structure are shown in the figure below:
+<!-- 2 rounds of tweakable feistel structure are shown in the figure below:
 
-![img1](tfs.PNG)
+![img1](tfs.PNG) -->
 
 the structural details of the format preserving ciphers (FEA-1, FEA-2) are as follows
 - FEA-1 and FEA-2 has rounds depending upon the key size as shown in table below
@@ -129,9 +103,13 @@ the structural details of the format preserving ciphers (FEA-1, FEA-2) are as fo
 |$192$|$14$|$21$|
 |$256$|$16$|$24$|
 
+![img1](author2.PNG)
 
+in the above image as we can see that FEA-1 has $P_r, P_l \in F_2^n$ and in FF3-1 the only difference is that the $P_r,p_l \in Z/NZ$ group which is an additive modulo N group and so the analysis on FEA-1 can be easily extended to the analysis of FF3-1 algorithm. 
 
-**Linear approximations**
+### **Distinguishers**
+
+**Linear approximator and Distinguisher**
 
 Consider a function F:$F_2^n \to F_2^m$, and the conversion is dependent on some key K, and so linear discriminators are based on linear approximators with large coorrelation so mathematically a linear approximation F is is defined by a pair of mask (u1,u2) $\in F_2^n \oplus F_2^m$ space and is equal to
 
@@ -166,6 +144,8 @@ $$
 
 and once the correlation is find output the breaking is simple and we can take the advantage of this bias term to break the cipher.
 
+The distinguisher performs a hypothesis test, with null-hypothesis being that the data comes from an ideal tweakable block cipher and alternative hypothesis that data comes from real cipher.If the absolute value of the estimated correlation exceeds a predetermined threshold, then the null hypothesis is rejected.There is always a tradeoff between success probablity $P_{s}$ and false positive rate $P_{f}$
+
 
 **$\chi^2$ distinguisher**
 
@@ -191,7 +171,7 @@ This theorem, (proof can be found at <a href='#paper'>[4]</a>)  can be applied t
 
 If $D$ is the half-domain of the cipher and $T$ be the space of half-tweaks $T_{R}$ then we can deduce that
 
-$H=D \oplus D$, $G=D \oplus T$ and $Z=\{(y_{L},y_{R},x_{L},T_{R})\epsilon D \oplus D \oplus D \oplus T |y_{L}-x_{L}=0\}$
+$H=D \oplus D$, $G=D \oplus T$ and $Z=\\{(y_{L},y_{R},x_{L},T_{R})\epsilon D \oplus D \oplus D \oplus T |y_{L}-x_{L}=0\\}$
 
 For FEA-2 the full plaintext will be fixed, so $G=T$. In this case reduction modulo $Z$ will coorespond to truncating the ciphertext to its left half.
 
@@ -219,13 +199,13 @@ $$
 The $\chi^2$ statistic can be interpreted as an alternative method to estimate the sum of the squared correlations $|c(\psi)|^2$ for $\psi \epsilon Z^0$ with $\psi \neq 1$. Using this the data complexity of $\chi^2$ distinguisher for r rounds of FEA-1 and FF3-1 is of the order $N^{r/2 -1.5}$. For FEA-2 the data complexity is of the order $N^{r/3 -1.5}$. If we consider smallers choices for the group $Z$, we can set up $\chi^2$-distinguishers even if the part of ciphertext is available.
     
 
-**Message recovery attacks**
+### **Message recovery attacks**
 
 The message recovery attack using $\chi^2$ distinguisher has the following setup, as shown in the previous section of $\chi^2$ distinguisher, since the right half is fixed for input so the half domain is denoted by $D$ and tweaks space is denoted by $T$ and so H which is a ciphertest space is denoted by $D \oplus D$ since both the halfs are not constant and the $G$ which is input space represented by $D \oplus T$ for FEA-1 and FF3-1 for which right half is fixed and $G$ is $T$ in case of FEA-2 where both the halfs of plaintext are kept fixed 
 
 attack for FEA-1 AND FF3-1  
 
-**left half recovery**
+**Left half recovery**
 
 In this scenario the right half is fixed for the input messages and hence the $\chi^2$ distinguisher is represented as 
 
@@ -247,10 +227,19 @@ $$
 
 where $p_1$ and $p_g$ are the distributions that differ by $\triangle$ now all these values are ranked in ascending order for all $\triangle_g \in D$ and the value at the top of the list is a good candidate for $\triangle$
 
-**right half recovery**
+**Right half recovery**
 
-The idea behind the right half recovery is the exploitation of the following property, if we apply the left-half recovery method to any arbitrary $(x_l,x_r)$ and $(x_l',x_r')$
+The idea behind the right half recovery is the exploitation of the following property, if we apply the left-half recovery method to any arbitrary $(x_l,x_r)$ and $(x_l',x_r')$ then the recovered difference $\triangle$ would be $\triangle = x_l - x_l' + F_1(x_r) - F_1(x_r')$ after first round, so if $x_l - x_l'$ is known then the adversary can recover the $\triangle$ to obtain the difference F_1(x_r) - F_1(x_r') and this is useful to recover the right half of the message, and we can also apply the same method using different values of Z and in that case the difference is $F_1(x_r) - F_1(x_r')$, the right half is recovered by finding $x_r'$ until the recovered difference is 0, i.e. $\triangle$ becomes 0, also the same idea of FEA-1 and FF3-1 can be applied to the FEA-2 algorithm and so for the left-half recovery the adversary can query the encryption of the secret message ($x_l,x_r$) under many tweaks with alternate constant tweaks like keep $T_l$ constant and for each guess of $x_l'$ similar queries are made of the form $(x_l',x_r)$, (right half same) and the values then can be used for identifying values of $x_l$ and so the equation becomes 
 
+$$
+F_2(x_l + F_1(x_r)) + x_r = F_2(x_l' + F_1(x_r)) + x_r
+$$
+
+and hence the value of $x_l$ can be identified from this 
+
+### **Conclusion**
+
+The author of the paper shows that the format preserving encryption schemes such as (FEA-1, FEA-2, FF3-1) are vulnerable to the linear cryptanalysis attack and the analysis in the paper is done on the small domain fiestel cipher with alternating round tweaks (T), The author proposes the method of attack as to vary the tweaks in every even number round for FF3-1 and FEA-1 and to vary it every 3 round in FEA-2 and the tweaks in all other rounds are fixed, the authors also discuss the linear approximator which finds out the variance of correlation and based on the deviation of the variance from the well known value helps us to exploit some good properties. The authors also utilize the method of multidimensional linear cryptanalysis, and using the $\chi_2$ distinguisher, which is based on the pearson chi-square test to find the deviation of two distribution from each other based on some threshold, finally the authors explained the message recovery attacks using the multidimensional linear cryptanalysis, the authors have mentioned about the left half message recovery and the right half message recovery, they basically find out the difference $\triangle = x_l - x_l'$ for each of them $x_r$ is fixed and hence removed from the equation and by revoring the value of $\triangle$ the left half can be recovered, and they also extend the same idea for arbitrary $(x_l,x_r)$, $(x_l',x_r')$ and used it to recover the another right half of the message, finally they also explained key recovery attacks using the left half recovery method.
 
 ### **References**
 
@@ -258,6 +247,7 @@ The idea behind the right half recovery is the exploitation of the following pro
 2. <span style='color:blue'> https://ioactive.com/wp-content/uploads/2015/07/ldc_tutorial.pdf </span>
 3. <span style='color:blue'> https://pypi.org/project/ff3/ </span>
 4. <span style="color:blue" id="paper"> https://eprint.iacr.org/2021/815.pdf </span>
+4. <span style="color:blue"> https://iacr.org/submit/files/slides/2021/crypto/crypto2021/83/slides.pdf </span>
 
 
 
